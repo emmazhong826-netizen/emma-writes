@@ -1,390 +1,2310 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 
+
+
 <head>
+
+
+
   <meta charset="UTF-8">
 
+
+
   <meta
+
     name="viewport"
+
     content="width=device-width, initial-scale=1.0"
+
   >
+
+
 
   <title>Emma Writes</title>
 
+
+
   <meta
+
     name="description"
-    content="Emma Writes — writing, oral history, work notes, and academic work by Emma Zhong."
+
+    content="Emma Writes — writing, memory, oral history and academic work by Emma Zhong."
+
   >
 
+
+
   <link rel="stylesheet" href="style.css?v=7">
+
+
+
+
+
+  <!--
+
+    HOME PAGE ONLY
+
+    These styles only affect index.html.
+
+  -->
+
+
+
+  <style>
+
+
+
+    /* ========================================
+
+       HERO
+
+    ======================================== */
+
+
+
+    .emma-cover {
+
+      position: relative;
+
+
+
+      width: 100%;
+
+      height: 100vh;
+
+      min-height: 680px;
+
+
+
+      overflow: hidden;
+
+
+
+      background: #9f1f1f;
+
+    }
+
+
+
+
+
+    .emma-cover-image {
+
+      position: absolute;
+
+
+
+      inset: 0;
+
+
+
+      width: 100%;
+
+      height: 100%;
+
+
+
+      object-fit: cover;
+
+
+
+      /*
+
+        The illustration is already designed
+
+        with text-space on the left
+
+        and the woman on the right.
+
+      */
+
+      object-position: center center;
+
+
+
+      z-index: 0;
+
+    }
+
+
+
+
+
+    /*
+
+      Very subtle layer only.
+
+      We do NOT darken the artwork.
+
+    */
+
+
+
+    .emma-cover-wash {
+
+      position: absolute;
+
+
+
+      inset: 0;
+
+
+
+      z-index: 1;
+
+
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          rgba(72, 9, 9, 0.16) 0%,
+
+          rgba(72, 9, 9, 0.07) 38%,
+
+          rgba(72, 9, 9, 0.00) 65%
+
+        );
+
+
+
+      pointer-events: none;
+
+    }
+
+
+
+
+
+
+
+    /* ========================================
+
+       NAVIGATION
+
+    ======================================== */
+
+
+
+    .emma-cover-header {
+
+      position: absolute;
+
+
+
+      top: 0;
+
+      left: 0;
+
+
+
+      width: 100%;
+
+
+
+      padding: 29px 4.5vw;
+
+
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+
+
+      z-index: 5;
+
+    }
+
+
+
+
+
+    .emma-cover-logo {
+
+      color: #f5d9a6;
+
+      text-shadow:
+        0 1px 2px rgba(44, 9, 8, 0.55),
+        0 2px 8px rgba(44, 9, 8, 0.28);
+
+
+
+      text-decoration: none;
+
+
+
+      font-family:
+
+        "Times New Roman",
+
+        "Songti SC",
+
+        serif;
+
+
+
+      font-size: 21px;
+
+      font-weight: 400;
+
+
+
+      letter-spacing: 0.2px;
+
+    }
+
+
+
+
+
+    .emma-cover-nav {
+
+      display: flex;
+
+
+
+      gap: 34px;
+
+    }
+
+
+
+
+
+    .emma-cover-nav a {
+
+      color: rgba(255, 231, 189, 0.88);
+
+      text-shadow:
+        0 1px 2px rgba(44, 9, 8, 0.55),
+        0 2px 8px rgba(44, 9, 8, 0.28);
+
+
+
+      text-decoration: none;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: 2px;
+
+
+
+      text-transform: uppercase;
+
+
+
+      transition: color 0.2s ease;
+
+    }
+
+
+
+
+
+    .emma-cover-nav a:hover {
+
+      color: #ffd486;
+
+    }
+
+
+
+
+
+
+
+    /* ========================================
+
+       HERO TEXT
+
+    ======================================== */
+
+
+
+    .emma-cover-content {
+
+      position: absolute;
+
+      left: 7.5vw;
+
+      top: 50%;
+
+      transform: translateY(-46%);
+
+      width: min(620px, 44vw);
+
+      z-index: 4;
+
+    }
+
+
+
+
+
+.emma-cover-content h1 {
+
+      margin: 0;
+
+      max-width: 620px;
+
+      color: #f4d7a2;
+
+      font-family:
+        "Times New Roman",
+        Georgia,
+        serif;
+
+      font-size: clamp(42px, 4.4vw, 66px);
+
+      font-weight: 400;
+
+      line-height: 0.98;
+
+      letter-spacing: -1.8px;
+
+      text-shadow:
+        0 2px 2px rgba(63, 13, 10, 0.18),
+        0 8px 22px rgba(63, 13, 10, 0.12);
+    }
+
+    .emma-cover-content h1 span {
+      display: block;
+    }
+
+    .emma-cover-content h1 span + span {
+      margin-top: 0.06em;
+    }
+
+
+
+
+
+    .emma-cover-cn {
+
+      margin-top: 29px;
+
+
+
+      color: rgba(255, 236, 203, 0.76);
+
+
+
+      font-size: 15px;
+
+
+
+      line-height: 1.9;
+
+    }
+/* ========================================
+
+       SCROLL
+
+    ======================================== */
+
+
+
+    .emma-scroll {
+
+      position: absolute;
+
+
+
+      left: 7vw;
+
+      bottom: 35px;
+
+
+
+      z-index: 5;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+
+
+      gap: 13px;
+
+
+
+      color: rgba(255, 231, 189, 0.68);
+
+
+
+      text-decoration: none;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 8px;
+
+
+
+      letter-spacing: 2.1px;
+
+    }
+
+
+
+
+
+    .emma-scroll-arrow {
+
+      font-size: 15px;
+
+
+
+      transition: transform 0.2s ease;
+
+    }
+
+
+
+
+
+    .emma-scroll:hover .emma-scroll-arrow {
+
+      transform: translateY(4px);
+
+    }
+
+
+
+
+
+
+
+    /* ========================================
+
+       ARCHIVE
+
+    ======================================== */
+
+
+
+    .home-archive-new {
+
+      padding:
+
+        130px
+
+        6vw
+
+        150px;
+
+
+
+      background: #f6eddf;
+
+    }
+
+
+
+
+
+    .home-archive-intro {
+
+      max-width: 700px;
+
+
+
+      margin-bottom: 95px;
+
+    }
+
+
+
+
+
+    .home-archive-label {
+
+      margin-bottom: 22px;
+
+
+
+      color: #992f2b;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: 2.5px;
+
+    }
+
+
+
+
+
+    .home-archive-intro h2 {
+
+      margin-bottom: 23px;
+
+
+
+      font-size: clamp(40px, 4.8vw, 66px);
+
+
+
+      font-weight: 400;
+
+
+
+      line-height: 1.08;
+
+
+
+      letter-spacing: -2px;
+
+    }
+
+
+
+
+
+    .home-archive-intro p:last-child {
+
+      max-width: 530px;
+
+
+
+      color: #75685c;
+
+
+
+      font-size: 17px;
+
+
+
+      line-height: 1.9;
+
+    }
+
+
+
+
+
+
+
+    /* ========================================
+
+       ARCHIVE ROWS
+
+    ======================================== */
+
+
+
+    .home-index-entry {
+
+      min-height: 225px;
+
+
+
+      padding: 43px 18px;
+
+
+
+      display: grid;
+
+
+
+      grid-template-columns:
+
+        72px
+
+        180px
+
+        minmax(0, 1fr)
+
+        105px;
+
+
+
+      gap: 30px;
+
+
+
+      align-items: start;
+
+
+
+      border-top: 1px solid #d6c5b2;
+
+
+
+      color: #2a1d19;
+
+
+
+      text-decoration: none;
+
+
+
+      transition:
+
+*background* 0.2s ease,
+
+        padding-left 0.2s ease;
+
+    }
+
+
+
+
+
+    .home-index-entry:last-child {
+
+      border-bottom: 1px solid #d6c5b2;
+
+    }
+
+
+
+
+
+    a.home-index-entry:hover {
+
+      background: #eedfcd;
+
+
+
+      padding-left: 28px;
+
+    }
+
+
+
+
+
+    .home-index-number {
+
+      color: #8b796b;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: 1px;
+
+    }
+
+
+
+
+
+    .home-index-label {
+
+      color: #992f2b;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: 2px;
+
+    }
+
+
+
+
+
+    .home-index-main {
+
+      max-width: 700px;
+
+    }
+
+
+
+
+
+    .home-index-main h3 {
+
+      margin-bottom: 17px;
+
+
+
+      font-size: clamp(31px, 3.2vw, 48px);
+
+
+
+      font-weight: 400;
+
+
+
+      line-height: 1.12;
+
+
+
+      letter-spacing: -1px;
+
+    }
+
+
+
+
+
+    .home-index-main p {
+
+      max-width: 575px;
+
+
+
+      color: #75685c;
+
+
+
+      font-size: 16px;
+
+
+
+      line-height: 1.85;
+
+    }
+
+
+
+
+
+    .home-index-action {
+
+      padding-top: 7px;
+
+
+
+      color: #75685c;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 9px;
+
+
+
+      text-align: right;
+
+    }
+
+
+
+
+
+    a.home-index-entry:hover
+
+    .home-index-action {
+
+      color: #992f2b;
+
+    }
+
+
+
+
+
+    .home-index-muted {
+
+      cursor: default;
+
+    }
+
+
+
+
+
+    .home-index-muted
+
+    .home-index-action {
+
+      opacity: 0.55;
+
+
+
+      font-style: italic;
+
+    }
+
+
+
+
+
+
+
+    /* ========================================
+
+       ABOUT
+
+    ======================================== */
+
+
+
+    .home-about-new {
+
+      padding:
+
+        135px
+
+        7vw
+
+        150px;
+
+
+
+      background: #f6eddf;
+
+
+
+      border-top: 1px solid #d6c5b2;
+
+    }
+
+
+
+
+
+    .home-about-title {
+
+      margin-bottom: 68px;
+
+    }
+
+
+
+
+
+    .home-about-title p {
+
+      margin-bottom: 18px;
+
+
+
+      color: #992f2b;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 9px;
+
+
+
+      letter-spacing: 2.5px;
+
+    }
+
+
+
+
+
+    .home-about-title h2 {
+
+      font-size: clamp(42px, 5vw, 68px);
+
+
+
+      font-weight: 400;
+
+
+
+      line-height: 1.06;
+
+
+
+      letter-spacing: -2px;
+
+    }
+
+
+
+
+
+    .home-about-title span {
+
+      display: block;
+
+
+
+      margin-top: 7px;
+
+
+
+      color: #75685c;
+
+
+
+      font-size: 0.5em;
+
+
+
+      letter-spacing: 1px;
+
+    }
+
+
+
+
+
+    .home-about-grid {
+
+      display: grid;
+
+
+
+      grid-template-columns:
+
+        210px
+
+        minmax(0, 650px)
+
+        1fr;
+
+
+
+      gap: 70px;
+
+
+
+      align-items: start;
+
+    }
+
+
+
+
+
+    .home-about-grid img {
+
+      width: 175px;
+
+      height: 225px;
+
+
+
+      object-fit: cover;
+
+      object-position: center top;
+
+    }
+
+
+
+
+
+    .home-about-copy p {
+
+      margin-bottom: 26px;
+
+
+
+      color: #75685c;
+
+
+
+      font-size: 17px;
+
+
+
+      line-height: 1.95;
+
+    }
+
+
+
+
+
+    .home-about-copy
+
+    .home-about-lead {
+
+      color: #2a1d19;
+
+
+
+      font-size: 20px;
+
+
+
+      line-height: 1.8;
+
+    }
+
+
+
+
+
+    .home-about-tags {
+
+      color: #75685c;
+
+
+
+      font-family:
+
+        Arial,
+
+        sans-serif;
+
+
+
+      font-size: 8px;
+
+
+
+      letter-spacing: 1.7px;
+
+    }
+
+
+
+
+
+    .home-about-tags p {
+
+      margin-bottom: 14px;
+
+    }
+
+
+
+
+
+
+
+    /* ========================================
+
+       MOBILE
+
+    ======================================== */
+
+
+
+    @media (max-width: 800px) {
+
+
+
+      .emma-cover {
+
+        height: 100svh;
+
+
+
+        min-height: 680px;
+
+      }
+
+
+
+
+
+      /*
+
+        On mobile the image is heavily cropped.
+
+        Keep the woman visible on the right.
+
+      */
+
+
+
+      .emma-cover-image {
+
+        object-position: 58% center;
+
+      }
+
+
+
+
+
+      .emma-cover-wash {
+
+        background:
+
+          linear-gradient(
+
+            90deg,
+
+            rgba(80,12,12,0.24) 0%,
+
+            rgba(80,12,12,0.10) 50%,
+
+            rgba(80,12,12,0.00) 80%
+
+          );
+
+      }
+
+
+
+
+
+      .emma-cover-header {
+
+        padding: 23px;
+
+      }
+
+
+
+
+
+      .emma-cover-logo {
+
+        font-size: 18px;
+
+      }
+
+
+
+
+
+      .emma-cover-nav {
+
+        gap: 17px;
+
+      }
+
+
+
+
+
+      .emma-cover-nav a {
+
+        font-size: 8px;
+
+      }
+
+
+
+
+
+      .emma-cover-content {
+
+        left: 24px;
+
+
+
+        top: auto;
+
+        bottom: 105px;
+
+
+
+        transform: none;
+
+
+
+        width: min(80vw, 390px);
+
+      }
+
+
+
+
+
+      .emma-cover-content h1 {
+
+        font-size: clamp(38px, 11vw, 54px);
+
+        line-height: 0.94;
+
+        letter-spacing: -1.8px;
+      }
+
+
+
+
+
+      .emma-cover-cn {
+
+        font-size: 13px;
+
+      }
+
+
+
+
+
+      .emma-scroll {
+
+        left: 24px;
+
+
+
+        bottom: 29px;
+
+      }
+
+
+
+
+
+      .home-archive-new {
+
+        padding:
+
+          90px
+
+          24px
+
+          105px;
+
+      }
+
+
+
+
+
+      .home-archive-intro {
+
+        margin-bottom: 65px;
+
+      }
+
+
+
+
+
+      .home-archive-intro h2 {
+
+        font-size: 41px;
+
+      }
+
+
+
+
+
+      .home-index-entry {
+
+        min-height: auto;
+
+
+
+        padding: 32px 0;
+
+
+
+        grid-template-columns:
+
+          40px
+
+          1fr;
+
+
+
+        gap:
+
+          12px
+
+          18px;
+
+      }
+
+
+
+
+
+      a.home-index-entry:hover {
+
+        padding-left: 0;
+
+      }
+
+
+
+
+
+      .home-index-number {
+
+        grid-column: 1;
+
+      }
+
+
+
+
+
+      .home-index-label {
+
+        grid-column: 2;
+
+      }
+
+
+
+
+
+      .home-index-main {
+
+        grid-column: 1 / -1;
+
+
+
+        padding-top: 12px;
+
+      }
+
+
+
+
+
+      .home-index-main h3 {
+
+        font-size: 33px;
+
+      }
+
+
+
+
+
+      .home-index-action {
+
+        grid-column: 1 / -1;
+
+
+
+        text-align: left;
+
+
+
+        padding-top: 14px;
+
+      }
+
+
+
+
+
+      .home-about-new {
+
+        padding:
+
+          90px
+
+          24px
+
+          105px;
+
+      }
+
+
+
+
+
+      .home-about-title {
+
+        margin-bottom: 50px;
+
+      }
+
+
+
+
+
+      .home-about-title h2 {
+
+        font-size: 42px;
+
+      }
+
+
+
+
+
+      .home-about-grid {
+
+        grid-template-columns: 1fr;
+
+
+
+        gap: 37px;
+
+      }
+
+
+
+
+
+      .home-about-grid img {
+
+        width: 155px;
+
+        height: 200px;
+
+      }
+
+
+
+
+
+      .home-about-tags {
+
+        display: none;
+
+      }
+
+
+
+    }
+
+
+
+
+    /* ========================================
+       FOOTER — HOME PAGE PALETTE
+    ======================================== */
+
+    body > footer {
+      background: #8f2421;
+      color: rgba(255, 236, 203, 0.82);
+      border-top: 0;
+    }
+
+    body > footer .footer-note {
+      color: rgba(255, 236, 203, 0.62);
+    }
+
+  </style>
+
+
+
 </head>
 
 
-<body class="home-page">
 
 
-  <!-- =========================
-       HERO / FULL SCREEN COVER
-  ========================== -->
 
-  <section class="cover-hero">
+<body>
 
-    <!-- Full screen image -->
+
+
+
+
+  <!-- ========================================
+
+       FULL SCREEN COVER
+
+  ========================================= -->
+
+
+
+  <section class="emma-cover">
+
+
+
     <img
-      src="images/princess.jpg"
-      alt="Classical painting"
-      class="cover-image"
+
+      src="images/emma.png"
+
+      alt=""
+
+      class="emma-cover-image"
+
     >
 
-    <!-- Dark gradient so text stays readable -->
-    <div class="cover-overlay"></div>
+
+
+    <div class="emma-cover-wash"></div>
+
+
+
 
 
     <!-- Navigation -->
-    <header class="cover-header">
 
-      <a href="index.html" class="cover-logo">
+
+
+    <header class="emma-cover-header">
+
+
+
+      <a
+
+        href="index.html"
+
+        class="emma-cover-logo"
+
+      >
+
         Emma Writes
+
       </a>
 
-      <nav class="cover-nav">
+
+
+
+
+      <nav class="emma-cover-nav">
+
+
+
+        <a href="essays.html">
+
+          Writing
+
+        </a>
+
+
 
         <a href="#archive">
+
           Archive
+
         </a>
+
+
 
         <a href="#about">
+
           About
+
         </a>
 
+
+
       </nav>
+
+
 
     </header>
 
 
-    <!-- Main Cover Text -->
-    <div class="cover-content">
 
-      <p class="cover-eyebrow">
-        EMMA ZHONG · 仲曼琳
-      </p>
 
-      <h1>
-        I write to understand,<br>
-        to remember,<br>
-        and to become.
+
+
+
+    <!-- Hero writing -->
+
+
+
+    <div class="emma-cover-content">
+<h1>
+        <span>Understand.</span>
+        <span>Remember.</span>
+        <span>Become.</span>
       </h1>
-
-      <p class="cover-cn">
-        我写，为了理解，<br>
-        为了记住，也为了成为。
-      </p>
-
-    </div>
+</div>
 
 
-    <!-- Scroll cue -->
-    <a href="#archive" class="scroll-cue">
-      <span>EXPLORE</span>
-      <span class="scroll-arrow">↓</span>
+
+
+
+
+
+    <a
+
+      href="#archive"
+
+      class="emma-scroll"
+
+    >
+
+
+
+      <span>
+
+        EXPLORE
+
+      </span>
+
+
+
+      <span class="emma-scroll-arrow">
+
+        ↓
+
+      </span>
+
+
+
     </a>
 
+
+
   </section>
+
+
+
+
+
+
+
+  <!-- ========================================
+
+       ARCHIVE
+
+  ========================================= -->
 
 
 
   <main>
 
 
-    <!-- =========================
-         ARCHIVE INTRO
-    ========================== -->
 
-    <section class="home-archive" id="archive">
+    <section
 
-      <div class="home-section-intro">
+      class="home-archive-new"
 
-        <p class="home-small-label">
+      id="archive"
+
+    >
+
+
+
+
+
+      <div class="home-archive-intro">
+
+
+
+        <p class="home-archive-label">
+
           THE ARCHIVE
+
         </p>
+
+
 
         <h2>
+
           写下生活，保存时间。
+
         </h2>
 
+
+
         <p>
+
           这里收录我的公开写作、家族口述史、
+
           工作中的记录与学术思考。
+
         </p>
 
+
+
       </div>
 
 
 
-      <!-- =========================
-           01 WRITING
-      ========================== -->
+
+
+
+
+      <!-- 01 WRITING -->
+
+
 
       <a
+
         href="essays.html"
-        class="home-entry"
+
+        class="home-index-entry"
+
       >
 
-        <div class="home-entry-number">
+
+
+        <div class="home-index-number">
+
           01
+
         </div>
 
-        <div class="home-entry-label">
+
+
+        <div class="home-index-label">
+
           WRITING
+
         </div>
 
-        <div class="home-entry-main">
+
+
+        <div class="home-index-main">
+
+
 
           <h3>
+
             人间书写
+
           </h3>
 
+
+
           <p>
+
             杂记、散文、读后感、社会评论与诗歌。
+
             写我看见的人，也写我正在经历和思考的世界。
+
           </p>
 
+
+
         </div>
 
-        <div class="home-entry-action">
+
+
+        <div class="home-index-action">
+
           Explore →
+
         </div>
+
+
 
       </a>
 
 
 
-      <!-- =========================
-           02 ORAL HISTORY
-      ========================== -->
+
+
+
+
+      <!-- 02 ORAL HISTORY -->
+
+
 
       <a
+
         href="dayeye.html"
-        class="home-entry"
+
+        class="home-index-entry"
+
       >
 
-        <div class="home-entry-number">
+
+
+        <div class="home-index-number">
+
           02
+
         </div>
 
-        <div class="home-entry-label">
+
+
+        <div class="home-index-label">
+
           ORAL HISTORY
+
         </div>
 
-        <div class="home-entry-main">
+
+
+        <div class="home-index-main">
+
+
 
           <h3>
+
             《大爷爷的口述》
+
           </h3>
 
+
+
           <p>
+
             一个关于记忆、家族与时间的长期记录。
-            我拜访年过九十的大爷爷，
-            听他讲过去，也寻找自己的来处。
+
+            听一个九十多岁的老人讲过去，
+
+            也寻找自己的来处。
+
           </p>
 
+
+
         </div>
 
-        <div class="home-entry-action">
+
+
+        <div class="home-index-action">
+
           Enter →
+
         </div>
+
+
 
       </a>
 
 
 
-      <!-- =========================
-           03 WORK NOTES
-      ========================== -->
 
-      <div class="home-entry home-entry-muted">
 
-        <div class="home-entry-number">
+
+
+      <!-- 03 WORK NOTES -->
+
+
+
+      <div
+
+        class="
+
+          home-index-entry
+
+          home-index-muted
+
+        "
+
+      >
+
+
+
+        <div class="home-index-number">
+
           03
+
         </div>
 
-        <div class="home-entry-label">
+
+
+        <div class="home-index-label">
+
           WORK NOTES
+
         </div>
 
-        <div class="home-entry-main">
+
+
+        <div class="home-index-main">
+
+
 
           <h3>
+
             工作手记
+
           </h3>
 
+
+
           <p>
+
             关于教育、学生、产品、传播与日常工作的记录。
-            有些判断在工作中形成，
-            有些问题也只能在实践里慢慢想清楚。
+
+            有些问题，只有真正做起来之后才会出现。
+
           </p>
 
+
+
         </div>
 
-        <div class="home-entry-action home-coming-soon">
+
+
+        <div class="home-index-action">
+
           In progress
+
         </div>
+
+
 
       </div>
 
 
 
-      <!-- =========================
-           04 ACADEMIC
-      ========================== -->
+
+
+
+
+      <!-- 04 ACADEMIC -->
+
+
 
       <a
+
         href="academic.html"
-        class="home-entry"
+
+        class="home-index-entry"
+
       >
 
-        <div class="home-entry-number">
+
+
+        <div class="home-index-number">
+
           04
+
         </div>
 
-        <div class="home-entry-label">
+
+
+        <div class="home-index-label">
+
           ACADEMIC
+
         </div>
 
-        <div class="home-entry-main">
+
+
+        <div class="home-index-main">
+
+
 
           <h3>
+
             学术写作
+
           </h3>
 
+
+
           <p>
+
             论文、研究与学术成果。
+
             关于社会、人格、教育，
+
             以及人如何成为自己。
+
           </p>
 
+
+
         </div>
 
-        <div class="home-entry-action">
+
+
+        <div class="home-index-action">
+
           View →
+
         </div>
+
+
 
       </a>
+
+
+
+
 
     </section>
 
 
 
-    <!-- =========================
+
+
+
+
+    <!-- ========================================
+
          ABOUT
-    ========================== -->
 
-    <section class="home-about" id="about">
+    ========================================= -->
 
-      <div class="about-heading">
 
-        <p class="home-small-label">
+
+    <section
+
+      class="home-about-new"
+
+      id="about"
+
+    >
+
+
+
+
+
+      <div class="home-about-title">
+
+
+
+        <p>
+
           ABOUT
+
         </p>
 
+
+
         <h2>
+
           Emma Zhong
-          <span>仲曼琳</span>
+
+
+
+          <span>
+
+            仲曼琳
+
+          </span>
+
+
+
         </h2>
+
+
 
       </div>
 
 
-      <div class="about-layout">
 
 
-        <!-- Small portrait -->
-        <div class="about-image-wrap">
+
+
+
+      <div class="home-about-grid">
+
+
+
+
+
+        <!-- Portrait -->
+
+
+
+        <div>
+
+
 
           <img
+
             src="images/emmaselfie.jpg"
-            alt="Portrait of Emma Zhong"
-            class="home-about-photo"
+
+            alt="Emma Zhong"
+
           >
 
+
+
         </div>
+
+
+
+
+
 
 
         <!-- Bio -->
-        <div class="home-about-text">
 
-          <p class="about-lead">
+
+
+        <div class="home-about-copy">
+
+
+
+          <p class="home-about-lead">
+
             I write about people:
+
             how we become who we are,
+
             how history lives inside ordinary lives,
+
             and how we might deliberately shape ourselves.
+
           </p>
 
+
+
           <p>
+
             我的写作从个人经验出发，
+
             延伸到家庭记忆、社会观察与学术思考。
+
+          </p>
+
+
+
+          <p>
+
             我关心人如何成为自己，
+
             历史如何留在普通人的生命里，
+
             以及教育是否能够帮助我们重新塑造自己。
+
           </p>
 
+
+
           <p>
+
             很多公开文字，
+
             都开始于我的私人日志。
+
           </p>
+
+
 
         </div>
 
 
-        <!-- Small details -->
-        <div class="about-details">
 
-          <p>
-            WRITING
-          </p>
 
-          <p>
-            ORAL HISTORY
-          </p>
 
-          <p>
-            EDUCATION
-          </p>
 
-          <p>
-            ACADEMIC WORK
-          </p>
+
+        <!-- Keywords -->
+
+
+
+        <div class="home-about-tags">
+
+
+
+          <p>WRITING</p>
+
+
+
+          <p>ORAL HISTORY</p>
+
+
+
+          <p>EDUCATION</p>
+
+
+
+          <p>ACADEMIC WORK</p>
+
+
 
         </div>
+
+
+
+
 
       </div>
 
+
+
     </section>
+
 
 
   </main>
 
 
 
-  <!-- =========================
+
+
+
+
+  <!-- ========================================
+
        FOOTER
-  ========================== -->
+
+  ========================================= -->
+
+
 
   <footer>
 
+
+
     <p>
+
       © <span id="year"></span> Emma Zhong
+
     </p>
 
+
+
     <p class="footer-note">
+
       Written slowly. Kept carefully.
+
     </p>
+
+
 
   </footer>
 
 
+
+
+
   <script src="script.js?v=6"></script>
 
+
+
 </body>
+
+
 
 </html>
