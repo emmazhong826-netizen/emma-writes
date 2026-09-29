@@ -118,7 +118,6 @@ a {
 .hero-painting {
   width: 100%;
   max-width: 430px;
-
   height: 610px;
 
   object-fit: cover;
@@ -134,7 +133,6 @@ a {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
-
   letter-spacing: 2.7px;
 }
 
@@ -149,7 +147,6 @@ a {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
-
   letter-spacing: 2.4px;
 }
 
@@ -440,7 +437,7 @@ footer {
 
 
 /* =========================
-   WRITING ARCHIVE PAGE
+   WRITING ARCHIVE
 ========================= */
 
 .archive-hero {
@@ -454,7 +451,6 @@ footer {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
-
   letter-spacing: 2.5px;
 }
 
@@ -523,11 +519,24 @@ footer {
   letter-spacing: 1.5px;
 }
 
+.archive-title {
+  max-width: 760px;
+}
+
 .archive-title h2 {
   margin-bottom: 14px;
 
   font-size: 36px;
   font-weight: 400;
+
+  line-height: 1.18;
+}
+
+.archive-title.long-title h2 {
+  max-width: 720px;
+
+  font-size: 31px;
+  line-height: 1.22;
 }
 
 .archive-title p {
@@ -542,10 +551,6 @@ footer {
 .archive-arrow {
   font-size: 24px;
   text-align: right;
-}
-
-.archive-coming {
-  opacity: 0.4;
 }
 
 
@@ -583,7 +588,22 @@ footer {
   font-weight: 400;
 
   line-height: 1.05;
+  letter-spacing: -1.5px;
 }
+
+
+/* Long titles */
+
+.article-header.long-title h1 {
+  max-width: 850px;
+
+  font-size: clamp(42px, 5.2vw, 67px);
+  line-height: 1.08;
+  letter-spacing: -1px;
+}
+
+
+/* Subtitle */
 
 .article-subtitle {
   max-width: 620px;
@@ -597,6 +617,7 @@ footer {
 
   line-height: 1.5;
 }
+
 
 .article-date {
   color: var(--secondary);
@@ -626,7 +647,7 @@ footer {
 }
 
 
-/* English long-form writing */
+/* English prose */
 
 .article-body-en {
   font-family:
@@ -639,13 +660,47 @@ footer {
 }
 
 
-/* Section titles inside articles */
+/* =========================
+   POETRY
+========================= */
+
+.poem-page {
+  width: min(820px, calc(100% - 48px));
+}
+
+.poem-text {
+  white-space: pre-wrap;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 19px;
+  line-height: 1.95;
+
+  letter-spacing: 0.05px;
+}
+
+.poem-note {
+  margin-top: 70px;
+  padding-top: 28px;
+
+  border-top: 1px solid var(--line);
+
+  color: var(--secondary);
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   ARTICLE SECTIONS
+========================= */
 
 .article-section-title {
-  margin:
-    0
-    0
-    32px;
+  margin: 0 0 32px;
 
   font-size: 30px;
   font-weight: 400;
@@ -653,13 +708,8 @@ footer {
   line-height: 1.3;
 }
 
-
-/* Small visual break */
-
 .article-divider {
-  margin:
-    65px
-    0;
+  margin: 65px 0;
 
   color: var(--accent);
 
@@ -668,7 +718,6 @@ footer {
   font-size: 12px;
   letter-spacing: 6px;
 }
-
 
 .back-link {
   display: inline-block;
@@ -751,7 +800,6 @@ footer {
 
   .about-content {
     grid-template-columns: 1fr;
-
     gap: 50px;
   }
 
@@ -774,7 +822,6 @@ footer {
     padding: 30px 0;
 
     grid-template-columns: 1fr;
-
     gap: 16px;
   }
 
@@ -782,16 +829,28 @@ footer {
     padding-left: 0;
   }
 
+  .archive-title.long-title h2 {
+    font-size: 27px;
+  }
+
   .archive-arrow {
     display: none;
   }
 
-  .article-page {
+  .article-page,
+  .poem-page {
+    width: calc(100% - 48px);
+
     padding: 80px 0 110px;
   }
 
   .article-header h1 {
     font-size: 48px;
+  }
+
+  .article-header.long-title h1 {
+    font-size: 38px;
+    line-height: 1.12;
   }
 
   .article-subtitle {
@@ -803,8 +862,9 @@ footer {
     font-size: 17px;
   }
 
-  .article-section-title {
-    font-size: 27px;
+  .poem-text {
+    font-size: 17px;
+    line-height: 1.9;
   }
 
   footer {
