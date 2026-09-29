@@ -84,6 +84,7 @@ a {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
+
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -118,6 +119,7 @@ a {
 .hero-painting {
   width: 100%;
   max-width: 430px;
+
   height: 610px;
 
   object-fit: cover;
@@ -133,6 +135,7 @@ a {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
+
   letter-spacing: 2.7px;
 }
 
@@ -147,6 +150,7 @@ a {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
+
   letter-spacing: 2.4px;
 }
 
@@ -431,17 +435,18 @@ footer {
 
 .footer-note {
   font-family: "Times New Roman", serif;
+
   font-size: 12px;
   font-style: italic;
 }
 
 
 /* =========================
-   WRITING ARCHIVE
+   WRITING ARCHIVE HERO
 ========================= */
 
 .archive-hero {
-  padding: 110px 7vw 85px;
+  padding: 110px 7vw 70px;
 }
 
 .archive-hero .eyebrow {
@@ -451,6 +456,7 @@ footer {
 
   font-family: Arial, sans-serif;
   font-size: 10px;
+
   letter-spacing: 2.5px;
 }
 
@@ -472,8 +478,76 @@ footer {
   line-height: 1.9;
 }
 
+
+/* =========================
+   FILTER BAR
+========================= */
+
+.filter-section {
+  padding: 0 6vw 20px;
+}
+
+.filter-bar {
+  padding: 22px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-button {
+  flex: 0 0 auto;
+
+  padding: 8px 13px 7px;
+
+  border: 1px solid transparent;
+  background: transparent;
+
+  color: var(--secondary);
+
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+
+  letter-spacing: 1.3px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.filter-button:hover {
+  color: var(--accent);
+}
+
+.filter-button.active {
+  border-color: var(--accent);
+
+  color: var(--accent);
+
+  background: rgba(128, 53, 44, 0.03);
+}
+
+
+/* =========================
+   ARCHIVE LIST
+========================= */
+
 .archive-section {
-  padding: 45px 6vw 130px;
+  padding: 20px 6vw 130px;
 }
 
 .archive-list {
@@ -497,12 +571,17 @@ footer {
 
   transition:
     background 0.2s ease,
-    padding-left 0.2s ease;
+    padding-left 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .archive-item:hover {
   background: #e9e2d7;
   padding-left: 32px;
+}
+
+.archive-item.hidden {
+  display: none;
 }
 
 .archive-meta {
@@ -517,6 +596,12 @@ footer {
   font-size: 9px;
 
   letter-spacing: 1.5px;
+}
+
+.archive-meta span:first-child {
+  color: var(--accent);
+
+  letter-spacing: 1.7px;
 }
 
 .archive-title {
@@ -591,19 +676,14 @@ footer {
   letter-spacing: -1.5px;
 }
 
-
-/* Long titles */
-
 .article-header.long-title h1 {
   max-width: 850px;
 
   font-size: clamp(42px, 5.2vw, 67px);
+
   line-height: 1.08;
   letter-spacing: -1px;
 }
-
-
-/* Subtitle */
 
 .article-subtitle {
   max-width: 620px;
@@ -617,7 +697,6 @@ footer {
 
   line-height: 1.5;
 }
-
 
 .article-date {
   color: var(--secondary);
@@ -643,11 +722,14 @@ footer {
 
   font-size: 22px;
   font-style: italic;
+
   line-height: 1.8;
 }
 
 
-/* English prose */
+/* =========================
+   ENGLISH PROSE
+========================= */
 
 .article-body-en {
   font-family:
@@ -741,6 +823,7 @@ footer {
 
   .site-header {
     min-height: 72px;
+
     padding: 0 22px;
   }
 
@@ -752,12 +835,14 @@ footer {
     gap: 18px;
   }
 
+
   .hero {
     min-height: auto;
 
     padding: 55px 24px 85px;
 
     grid-template-columns: 1fr;
+
     gap: 55px;
   }
 
@@ -783,6 +868,7 @@ footer {
     height: 500px;
   }
 
+
   .writing-section,
   .about-section {
     padding: 80px 24px 100px;
@@ -798,8 +884,10 @@ footer {
     padding: 38px 28px;
   }
 
+
   .about-content {
     grid-template-columns: 1fr;
+
     gap: 50px;
   }
 
@@ -808,12 +896,31 @@ footer {
     height: 255px;
   }
 
+
   .archive-hero {
-    padding: 80px 24px 60px;
+    padding: 80px 24px 50px;
   }
 
+
+  .filter-section {
+    padding: 0 24px 15px;
+  }
+
+  .filter-bar {
+    gap: 8px;
+
+    padding: 18px 0;
+  }
+
+  .filter-button {
+    padding: 7px 10px 6px;
+
+    font-size: 8px;
+  }
+
+
   .archive-section {
-    padding: 35px 24px 90px;
+    padding: 15px 24px 90px;
   }
 
   .archive-item {
@@ -822,6 +929,7 @@ footer {
     padding: 30px 0;
 
     grid-template-columns: 1fr;
+
     gap: 16px;
   }
 
@@ -837,6 +945,7 @@ footer {
     display: none;
   }
 
+
   .article-page,
   .poem-page {
     width: calc(100% - 48px);
@@ -850,6 +959,7 @@ footer {
 
   .article-header.long-title h1 {
     font-size: 38px;
+
     line-height: 1.12;
   }
 
@@ -867,10 +977,12 @@ footer {
     line-height: 1.9;
   }
 
+
   footer {
     padding: 28px 24px;
 
     flex-direction: column;
+
     gap: 8px;
   }
 
