@@ -13,31 +13,83 @@
 
   <meta
     name="description"
-    content="Emma Writes — essays, journals, oral histories, and academic writing by Emma Zhong."
+    content="Emma Writes — writing, oral history, work notes, and academic work by Emma Zhong."
   >
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 
-<body>
+<body class="home-page">
+
 
   <!-- =========================
-       NAVIGATION
+       HERO / FULL SCREEN COVER
   ========================== -->
 
-  <header class="site-header">
+  <section class="cover-hero">
 
-    <a href="index.html" class="logo">
-      Emma Writes
+    <!-- Full screen image -->
+    <img
+      src="images/princess.jpg"
+      alt="Classical painting"
+      class="cover-image"
+    >
+
+    <!-- Dark gradient so text stays readable -->
+    <div class="cover-overlay"></div>
+
+
+    <!-- Navigation -->
+    <header class="cover-header">
+
+      <a href="index.html" class="cover-logo">
+        Emma Writes
+      </a>
+
+      <nav class="cover-nav">
+
+        <a href="#archive">
+          Archive
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+      </nav>
+
+    </header>
+
+
+    <!-- Main Cover Text -->
+    <div class="cover-content">
+
+      <p class="cover-eyebrow">
+        EMMA ZHONG · 仲曼琳
+      </p>
+
+      <h1>
+        I write to understand,<br>
+        to remember,<br>
+        and to become.
+      </h1>
+
+      <p class="cover-cn">
+        我写，为了理解，<br>
+        为了记住，也为了成为。
+      </p>
+
+    </div>
+
+
+    <!-- Scroll cue -->
+    <a href="#archive" class="scroll-cue">
+      <span>EXPLORE</span>
+      <span class="scroll-arrow">↓</span>
     </a>
 
-    <nav class="nav">
-      <a href="#writing">Writing</a>
-      <a href="#about">About</a>
-    </nav>
-
-  </header>
+  </section>
 
 
 
@@ -45,256 +97,179 @@
 
 
     <!-- =========================
-         HERO
+         ARCHIVE INTRO
     ========================== -->
 
-    <section class="hero">
+    <section class="home-archive" id="archive">
 
-      <!-- LEFT: PAINTING -->
-      <div class="hero-art">
+      <div class="home-section-intro">
 
-        <img
-          src="images/princess.jpg"
-          alt="Classical painting of a woman gathering flowers"
-          class="hero-painting"
-        >
-
-        <p class="hero-name">
-          EMMA ZHONG · 仲曼琳
+        <p class="home-small-label">
+          THE ARCHIVE
         </p>
-
-      </div>
-
-
-      <!-- RIGHT: MANIFESTO -->
-      <div class="hero-copy">
-
-        <p class="hero-kicker">
-          WRITING · MEMORY · BECOMING
-        </p>
-
-        <h1>
-          I write to understand,<br>
-          to remember,<br>
-          and to become.
-        </h1>
-
-        <p class="hero-cn">
-          我写，为了理解，<br>
-          为了记住，也为了成为。
-        </p>
-
-        <div class="hero-line"></div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         WRITING
-    ========================== -->
-
-    <section
-      class="writing-section"
-      id="writing"
-    >
-
-      <div class="section-heading">
-
-        <span>01</span>
 
         <h2>
-          Writing
+          写下生活，保存时间。
         </h2>
+
+        <p>
+          这里收录我的公开写作、家族口述史、
+          工作中的记录与学术思考。
+        </p>
 
       </div>
 
 
-      <div class="writing-grid">
 
+      <!-- =========================
+           01 WRITING
+      ========================== -->
 
-        <!-- PRIVATE JOURNAL -->
-        <article class="writing-card private">
+      <a
+        href="essays.html"
+        class="home-entry"
+      >
 
-          <div class="card-number">
-            I
-          </div>
+        <div class="home-entry-number">
+          01
+        </div>
 
-          <p class="card-label">
-            PRIVATE
-          </p>
+        <div class="home-entry-label">
+          WRITING
+        </div>
 
-          <h3>
-            私人日志
-          </h3>
-
-          <p class="card-description">
-            写给自己的文字。
-          </p>
-
-          <p class="card-body">
-            我要求自己完全诚实。
-            记录每天发生的事，
-            记录我的感受，
-            也重新审视这些感受是否真实、
-            是否准确、
-            是否需要被调整。
-          </p>
-
-          <p class="card-body">
-            写作在这里不是表达，
-            而是内察。
-          </p>
-
-          <span class="locked">
-            Private archive
-          </span>
-
-        </article>
-
-
-
-        <!-- ESSAYS -->
-        <article class="writing-card">
-
-          <div class="card-number">
-            II
-          </div>
-
-          <p class="card-label">
-            ESSAYS · POETRY · OBSERVATIONS
-          </p>
+        <div class="home-entry-main">
 
           <h3>
             人间书写
           </h3>
 
-          <p class="card-description">
-            写给家人、朋友，
-            也写给偶然来到这里的人。
+          <p>
+            杂记、散文、读后感、社会评论与诗歌。
+            写我看见的人，也写我正在经历和思考的世界。
           </p>
 
-          <p class="card-body">
-            散文、诗歌、
-            社会观察与读后感。
-            我希望这里的文字有价值，
-            也有美。
-          </p>
+        </div>
 
-          <p class="card-body">
-            它可以写生活的褶皱，
-            也可以写人在困顿之中
-            仍然保有的光。
-          </p>
+        <div class="home-entry-action">
+          Explore →
+        </div>
 
-          <a
-            href="essays.html"
-            class="card-link"
-          >
-            Read writings →
-          </a>
-
-        </article>
+      </a>
 
 
 
-        <!-- ORAL HISTORY -->
-        <article class="writing-card featured">
+      <!-- =========================
+           02 ORAL HISTORY
+      ========================== -->
 
-          <div class="card-number">
-            III
-          </div>
+      <a
+        href="dayeye.html"
+        class="home-entry"
+      >
 
-          <p class="card-label">
-            ORAL HISTORY
-          </p>
+        <div class="home-entry-number">
+          02
+        </div>
+
+        <div class="home-entry-label">
+          ORAL HISTORY
+        </div>
+
+        <div class="home-entry-main">
 
           <h3>
             《大爷爷的口述》
           </h3>
 
-          <p class="card-description">
-            一个关于记忆、
-            家族与时间的长期记录。
+          <p>
+            一个关于记忆、家族与时间的长期记录。
+            我拜访年过九十的大爷爷，
+            听他讲过去，也寻找自己的来处。
           </p>
 
-          <p class="card-body">
-            大爷爷出生于二十世纪三十年代，
-            五十年代毕业于上海交通大学，
-            如今年过九十。
+        </div>
+
+        <div class="home-entry-action">
+          Enter →
+        </div>
+
+      </a>
+
+
+
+      <!-- =========================
+           03 WORK NOTES
+      ========================== -->
+
+      <div class="home-entry home-entry-muted">
+
+        <div class="home-entry-number">
+          03
+        </div>
+
+        <div class="home-entry-label">
+          WORK NOTES
+        </div>
+
+        <div class="home-entry-main">
+
+          <h3>
+            工作手记
+          </h3>
+
+          <p>
+            关于教育、学生、产品、传播与日常工作的记录。
+            有些判断在工作中形成，
+            有些问题也只能在实践里慢慢想清楚。
           </p>
 
-          <p class="card-body">
-            我计划每周去拜访他，
-            听他讲过去。
-            我想知道自己的家从哪里来，
-            也想让未来的孩子知道，
-            在他们之前，
-            曾经有怎样的一群人生活过。
-          </p>
+        </div>
 
-          <p class="quote">
-            “智慧流淌着，
-            就等着儿女孙辈去接。”
-          </p>
+        <div class="home-entry-action home-coming-soon">
+          In progress
+        </div>
 
-          <a
-            href="dayeye.html"
-            class="card-link"
-          >
-            Enter the archive →
-          </a>
-
-        </article>
+      </div>
 
 
 
-        <!-- ACADEMIC -->
-        <article class="writing-card">
+      <!-- =========================
+           04 ACADEMIC
+      ========================== -->
 
-          <div class="card-number">
-            IV
-          </div>
+      <a
+        href="academic.html"
+        class="home-entry"
+      >
 
-          <p class="card-label">
-            ACADEMIC WORK
-          </p>
+        <div class="home-entry-number">
+          04
+        </div>
+
+        <div class="home-entry-label">
+          ACADEMIC
+        </div>
+
+        <div class="home-entry-main">
 
           <h3>
             学术写作
           </h3>
 
-          <p class="card-description">
-            关于社会、
-            人格、
-            教育与人的形成。
+          <p>
+            论文、研究与学术成果。
+            关于社会、人格、教育，
+            以及人如何成为自己。
           </p>
 
-          <p class="card-body">
-            这里收录我的论文、
-            研究项目与学术成果。
-          </p>
+        </div>
 
-          <p class="card-body">
-            我持续追问一个问题：
-            社会如何塑造人，
-            而人又如何获得
-            改变自己的可能？
-          </p>
+        <div class="home-entry-action">
+          View →
+        </div>
 
-          <a
-            href="academic.html"
-            class="card-link"
-          >
-            View academic work →
-          </a>
-
-        </article>
-
-
-      </div>
+      </a>
 
     </section>
 
@@ -304,46 +279,41 @@
          ABOUT
     ========================== -->
 
-    <section
-      class="about-section"
-      id="about"
-    >
+    <section class="home-about" id="about">
 
-      <div class="section-heading">
+      <div class="about-heading">
 
-        <span>02</span>
+        <p class="home-small-label">
+          ABOUT
+        </p>
 
         <h2>
-          About
+          Emma Zhong
+          <span>仲曼琳</span>
         </h2>
 
       </div>
 
 
-      <div class="about-content">
+      <div class="about-layout">
 
 
-        <!-- PORTRAIT -->
-        <div class="about-profile">
+        <!-- Small portrait -->
+        <div class="about-image-wrap">
 
           <img
             src="images/emmaselfie.jpg"
             alt="Portrait of Emma Zhong"
-            class="about-photo"
+            class="home-about-photo"
           >
-
-          <h3>
-            Emma Zhong<br>
-            仲曼琳
-          </h3>
 
         </div>
 
 
-        <!-- BIO -->
-        <div class="about-text">
+        <!-- Bio -->
+        <div class="home-about-text">
 
-          <p>
+          <p class="about-lead">
             I write about people:
             how we become who we are,
             how history lives inside ordinary lives,
@@ -351,25 +321,41 @@
           </p>
 
           <p>
-            我的写作从私人生活出发，
-            也走向家庭、社会与思想。
+            我的写作从个人经验出发，
+            延伸到家庭记忆、社会观察与学术思考。
+            我关心人如何成为自己，
+            历史如何留在普通人的生命里，
+            以及教育是否能够帮助我们重新塑造自己。
           </p>
 
           <p>
-            有些文字为了理解，
-            有些为了保存，
-            有些为了与别人分享，
-            也有些只是因为
-            一个瞬间值得被留下。
-          </p>
-
-          <p>
-            Emma Writes
-            是这些文字共同生活的地方。
+            很多公开文字，
+            都开始于我的私人日志。
           </p>
 
         </div>
 
+
+        <!-- Small details -->
+        <div class="about-details">
+
+          <p>
+            WRITING
+          </p>
+
+          <p>
+            ORAL HISTORY
+          </p>
+
+          <p>
+            EDUCATION
+          </p>
+
+          <p>
+            ACADEMIC WORK
+          </p>
+
+        </div>
 
       </div>
 
@@ -397,7 +383,7 @@
   </footer>
 
 
-  <script src="script.js"></script>
+  <script src="script.js?v=6"></script>
 
 </body>
 
