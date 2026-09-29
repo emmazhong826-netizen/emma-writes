@@ -1,57 +1,403 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-    <title>Emma Zhong</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    <link rel="stylesheet" href="style.css">
+  <title>Emma Writes</title>
+
+  <meta
+    name="description"
+    content="Emma Writes — essays, journals, oral histories, and academic writing by Emma Zhong."
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="home">
 
-    <main class="home-container">
+<body>
 
-        <header class="home-header">
-            <h1>Emma Zhong</h1>
-        </header>
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
-        <nav class="menu">
+  <header class="site-header">
 
-            <a href="french.html" class="menu-item">
-                <span>French</span>
-                <span class="arrow">↗</span>
-            </a>
+    <a href="index.html" class="logo">
+      Emma Writes
+    </a>
 
-            <a href="poem.html" class="menu-item">
-                <span>Poem</span>
-                <span class="arrow">↗</span>
-            </a>
+    <nav class="nav">
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+    </nav>
 
-            <a href="prose.html" class="menu-item">
-                <span>Prose</span>
-                <span class="arrow">↗</span>
-            </a>
+  </header>
 
-            <a href="commentary.html" class="menu-item">
-                <span>Social Commentary</span>
-                <span class="arrow">↗</span>
-            </a>
 
-            <a href="school.html" class="menu-item">
-                <span>School</span>
-                <span class="arrow">↗</span>
-            </a>
 
-        </nav>
+  <main>
 
-        <footer>
-            © 2026 Emma Zhong
-        </footer>
 
-    </main>
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <!-- LEFT: PAINTING -->
+      <div class="hero-art">
+
+        <img
+          src="images/princess.jpg"
+          alt="Classical painting of a woman gathering flowers"
+          class="hero-painting"
+        >
+
+        <p class="hero-name">
+          EMMA ZHONG · 仲曼琳
+        </p>
+
+      </div>
+
+
+      <!-- RIGHT: MANIFESTO -->
+      <div class="hero-copy">
+
+        <p class="hero-kicker">
+          WRITING · MEMORY · BECOMING
+        </p>
+
+        <h1>
+          I write to understand,<br>
+          to remember,<br>
+          and to become.
+        </h1>
+
+        <p class="hero-cn">
+          我写，为了理解，<br>
+          为了记住，也为了成为。
+        </p>
+
+        <div class="hero-line"></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         WRITING
+    ========================== -->
+
+    <section
+      class="writing-section"
+      id="writing"
+    >
+
+      <div class="section-heading">
+
+        <span>01</span>
+
+        <h2>
+          Writing
+        </h2>
+
+      </div>
+
+
+      <div class="writing-grid">
+
+
+        <!-- PRIVATE JOURNAL -->
+        <article class="writing-card private">
+
+          <div class="card-number">
+            I
+          </div>
+
+          <p class="card-label">
+            PRIVATE
+          </p>
+
+          <h3>
+            私人日志
+          </h3>
+
+          <p class="card-description">
+            写给自己的文字。
+          </p>
+
+          <p class="card-body">
+            我要求自己完全诚实。
+            记录每天发生的事，
+            记录我的感受，
+            也重新审视这些感受是否真实、
+            是否准确、
+            是否需要被调整。
+          </p>
+
+          <p class="card-body">
+            写作在这里不是表达，
+            而是内察。
+          </p>
+
+          <span class="locked">
+            Private archive
+          </span>
+
+        </article>
+
+
+
+        <!-- ESSAYS -->
+        <article class="writing-card">
+
+          <div class="card-number">
+            II
+          </div>
+
+          <p class="card-label">
+            ESSAYS · POETRY · OBSERVATIONS
+          </p>
+
+          <h3>
+            人间书写
+          </h3>
+
+          <p class="card-description">
+            写给家人、朋友，
+            也写给偶然来到这里的人。
+          </p>
+
+          <p class="card-body">
+            散文、诗歌、
+            社会观察与读后感。
+            我希望这里的文字有价值，
+            也有美。
+          </p>
+
+          <p class="card-body">
+            它可以写生活的褶皱，
+            也可以写人在困顿之中
+            仍然保有的光。
+          </p>
+
+          <a
+            href="essays.html"
+            class="card-link"
+          >
+            Read writings →
+          </a>
+
+        </article>
+
+
+
+        <!-- ORAL HISTORY -->
+        <article class="writing-card featured">
+
+          <div class="card-number">
+            III
+          </div>
+
+          <p class="card-label">
+            ORAL HISTORY
+          </p>
+
+          <h3>
+            《大爷爷的口述》
+          </h3>
+
+          <p class="card-description">
+            一个关于记忆、
+            家族与时间的长期记录。
+          </p>
+
+          <p class="card-body">
+            大爷爷出生于二十世纪三十年代，
+            五十年代毕业于上海交通大学，
+            如今年过九十。
+          </p>
+
+          <p class="card-body">
+            我计划每周去拜访他，
+            听他讲过去。
+            我想知道自己的家从哪里来，
+            也想让未来的孩子知道，
+            在他们之前，
+            曾经有怎样的一群人生活过。
+          </p>
+
+          <p class="quote">
+            “智慧流淌着，
+            就等着儿女孙辈去接。”
+          </p>
+
+          <a
+            href="dayeye.html"
+            class="card-link"
+          >
+            Enter the archive →
+          </a>
+
+        </article>
+
+
+
+        <!-- ACADEMIC -->
+        <article class="writing-card">
+
+          <div class="card-number">
+            IV
+          </div>
+
+          <p class="card-label">
+            ACADEMIC WORK
+          </p>
+
+          <h3>
+            学术写作
+          </h3>
+
+          <p class="card-description">
+            关于社会、
+            人格、
+            教育与人的形成。
+          </p>
+
+          <p class="card-body">
+            这里收录我的论文、
+            研究项目与学术成果。
+          </p>
+
+          <p class="card-body">
+            我持续追问一个问题：
+            社会如何塑造人，
+            而人又如何获得
+            改变自己的可能？
+          </p>
+
+          <a
+            href="academic.html"
+            class="card-link"
+          >
+            View academic work →
+          </a>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+      class="about-section"
+      id="about"
+    >
+
+      <div class="section-heading">
+
+        <span>02</span>
+
+        <h2>
+          About
+        </h2>
+
+      </div>
+
+
+      <div class="about-content">
+
+
+        <!-- PORTRAIT -->
+        <div class="about-profile">
+
+          <img
+            src="images/emmaselfie.jpg"
+            alt="Portrait of Emma Zhong"
+            class="about-photo"
+          >
+
+          <h3>
+            Emma Zhong<br>
+            仲曼琳
+          </h3>
+
+        </div>
+
+
+        <!-- BIO -->
+        <div class="about-text">
+
+          <p>
+            I write about people:
+            how we become who we are,
+            how history lives inside ordinary lives,
+            and how we might deliberately shape ourselves.
+          </p>
+
+          <p>
+            我的写作从私人生活出发，
+            也走向家庭、社会与思想。
+          </p>
+
+          <p>
+            有些文字为了理解，
+            有些为了保存，
+            有些为了与别人分享，
+            也有些只是因为
+            一个瞬间值得被留下。
+          </p>
+
+          <p>
+            Emma Writes
+            是这些文字共同生活的地方。
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <p>
+      © <span id="year"></span> Emma Zhong
+    </p>
+
+    <p class="footer-note">
+      Written slowly. Kept carefully.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
 
