@@ -1,0 +1,30 @@
+---
+id: "EW-WRITING-LOVE_MUMBLE"
+title: "杂记：Love Mumble"
+date: "2026. 2. 5"
+section: writing
+category: "essay"
+category_label: "杂记"
+visibility: public
+language: en
+slug: "love-mumble"
+summary: "On love, projection, eros, autonomy and the return of sobriety."
+legacy_html: "essays/love-mumble.html"
+---
+一月五号（上午十一点）
+
+        After a seven-hour sleep, I finally recovered from a mind that felt seared, and a heart that would not stop racing. I made him the center of my life, uncontrollably, sure — and sunk myself into the myth of the love chase. Well, I’m the chaser.
+
+        The anchoring of life is eroding, my stability, my equanimity, and my capacity for focus.
+
+        A hypnosis it is, where I’m carried farther and farther into the dark insecurities in the dusted corner of my heart. A singular dimension of life has simulteneously lifted me so high and tamped me so flat to exhaustion, too exhausted to write anything in the past few days.
+
+        But now the sun shines bright at my lashes and evaporates any residues of the undried tears. I’m full-spirited and rejuvenated. Sobriety catches me after ‘nights of hangover’. It brings a sense of assurance — there are no hurdles I cannot overcome given the degree of control I regained for my will, identity, and actions. I delineated the self from the mishmesh fusion of two figures in my fantasy.
+
+        He is not the one, and I know. Young, maladroit, and avoidant of favours from others, or perhaps from me. Yet to be a grown man (of course I’m not a grown-woman, that I know too). I also know, I don’t lovehimper se, I lovelove, i.e., the concept of being in love. I simply desire a company — an Other, a radical difference frommyway of life that stimulates. It gives me something to live for, an escape from full-blown individual responsibility that is overwhelming. In the hope that such an encounter injects me with a force of eros that massage the creativity, making the already chaotic explosive.
+
+        To a mind that is lost, crashing explosion is destructive but signify pan-ultimate romance. To a mind that is now clear, explosion is a form of cowardice, a intentional let go of autonomy and love of the self and others. A selfish sacrafice to a fictional ideal, and suboptimal form of escapism from life.
+
+        In all honesty, I'm reluctant to confront uncertainties of life head on. Some of the intense past battles leave me scared, gasping, and intimidated. In an unaware turn, I deposit my mental and physical resource to draft an ‘unavoidability’, an excuse of a relationship that distracts.
+
+        As the fuller picture reveals itself, my shadow subjects itself to examination. Not an angelic image, but a rugged, pointed, uncaliberated gun that exude vitality and hostility at the same time. One that ought to be pointed to the right direction. Rollercoaster experiences as such — especially given a few cycles — easily disheartens the heart that does not trust its own intuition and growth. Faith, focus, patience and contemplation is always necessitated, and I'm grateful to the sound sleep, listening ears, and the soothing sun that is always of tremendous help.

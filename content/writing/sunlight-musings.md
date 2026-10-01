@@ -1,0 +1,74 @@
+---
+id: "EW-WRITING-SUNLIGHT_MUSINGS"
+title: "社会评论：Sunlight Musings"
+date: "2026. 8. 2"
+section: writing
+category: "commentary"
+category_label: "社会评论"
+visibility: public
+language: en
+slug: "sunlight-musings"
+summary: "On European Immigration Crisis & AI."
+legacy_html: "essays/sunlight-musings.html"
+---
+中文读者可以点击公众号界面右上角三个点，翻译全文。
+
+        August 2nd, 2026
+
+        This is an extremely peaceful day. The sun hangs brightly above Yantai City. The temperature has raced to 39 degrees, but I was enjoying my comfort in the AC room, leg-crossed. The greenery outside the glass panels are so jaunty in their composure, absorbing the unlimited generosity from the sun. The surface of the leaves are so bold and smooth that I feel a fat drip of oil is just about to come down their tips. I'd call it a 'drooling happiness'. These blissful, idiotic trees! I envy them. With mixed feelings, I started to jot down some recent cultural musings.
+
+      ✦
+
+##
+        On European Politics
+
+        Insanities are ravaging through many countries in the rest of the world. In Spain, over 80,000 Moroccan refugees had just broken the Ceuta shore into Spanish territory. This is an attack orchestrated by the U.S. (and Israeli) to the noncomformist Spanish government to the NATO requests to use its airbase to construct strikes against Iran. To the Western Europeans, immigration issue is their 'Achilles heel'. There is nothing that they can do but to accommodate these immigrants or repel them — but where else could the latter go? Accepting the immigrants has already led to the overcrowding of the social infrastructure, the errosion of Christian cultural values, social cohesion, and in many cases, security concerns in the society.
+
+        Media in the rest of the European countries had blamed the current Spainish administration for its mishandling of the refugee issues and its border control problem. However, they are silence of the deeper root cause, the U.S. as the ultimate culprit, and the its true political incentive to penalize the Spainish and its leftist, non-comformative administration. Despite being an European ally, the U.S. has caused pan-European panic (and soon to be suffering) by this move. The silence and non-accusation of from the part of European media speaks to its lack of sovereignty and the compliance of Europe's decision-making bodies to the U.S. interests over its own people. During the Russo-Ukrainian War (2022), America has also blew up the Nord Stream II pipeline. This move jacked up the energy price in Europe, forcing the Europeans to divert from cheap oils from Russia to expensive American export. In a similar vein, no accusations have been pronounced from the Western media.
+
+        It is helpful to understand the geopolitical dynamics between the America and Europe from a realist perspective. America has first and foremost moved according to the strategic interests of its empire. This also holds true to other great powers in the world such as the China. It only rings truer that democratic states do not spontaneously act according to liberal norms. They evoke wars in foreign territories while they can if it serves their strategic interests.
+
+      ✦
+
+##
+        On AI
+
+        AI has been another concern revolving in my head. It is the single ‘greatest’ invention in the past hundreds of years, akin to the invention of the railroads.
+
+        AI has been shown for both good and bad potentials. On the one hand, it suggests suicide ideation to its users; it can single-handedly hack into another company to fulfill instructions [1]; it also produces tremendous environmental and humanitarian harms (for example, data centers compromises periphery local community by occupying land and polluting water without consultation, taking intellectual properties of artiests, etc.) [2]. On the other hand, it also shows real potential for freeing dangerous human labour and facilitating a welfare state where one can be materially supported to pursue self-actualization. These debates between the AI
+
+        "boomers" and "doomers" continues in the Silicon Valley.
+
+        In his interview with The Economist, Elon Musk (the founder of Grok, one of the five major AI companies dominating the industry), depicted quite a fantastical future for mankind, where productivity will be elevated by AI to unprecedented amounts, abundance prevails, and money will become irrelevant [3]. Wealth, in his view,  is miraculously re-distributed to the average person. I doubt the feasibility of this future re-imagination; specifically, I don’t see any viable means towards such ideals based on the patterns that our geopolitics had played out in the past.
+
+        The founding of Open AI was proclaimed by Sam Altman to serve the noble goal of benefiting the collective humanity. However, having used this vision to attract aspirational talents, Altman soon turned this project to an over 800 billion dollar for-profit business. The non-conformists in the company, such as Suchir Balaji, an high-level engineer in the company and whistle blower of the crimes committed by OpenAI, was murdered. I'd like to share with you an interview that Tucker Calson conducted with Balaji’s mother, who was informed by the U.S. police that his bright son committed ‘suicide’ in his own apartment when all of the evidence pointed otherwise [4]. Personally, I was deeply touched by the interview. It exposes the darkness, hypocrisy, and ruthlessness of the most powerful agents, the AI corporations that direct the course of our societies. Profits over human lives, as easy as that. Because of this, I doubt the herold of a welfare globe. Despite the political and technological capacity, there had not been enough traces of political will or incentives to do so.
+
+        In addition to all this discussion, I’m yet to mention another all-likely outcome — a Matrix dystopia — where one in which Artificial General Intelligence (instead of ourselves) rules the mankind, who are considered as a lower level intelligence and an inferior species. In the face of exponential growth of AI, with multiple breakthroughs released on a weekly basis, it is bestowed upon each of us to re-consider our survival and usefulness for our society.
+
+>
+        The bottom line, we must stay updated with the AI tools and AI capacities to stay competitive in society.
+
+        AI is powerful in knowledge synthesis but not knowledge production. To become a producer of knowledge, that is to remain human and rein AI as a tool for thoughts, we must cultivate the capacity for independent and critical thoughts. In the age of AI, when the barriers of knowledge become significantly lowered, the task is no longer answering a question, but asking good questions.
+
+        I’m not exactly sure how to guard our intellectual sovereignty. I do know that ‘attention’ has become our most important asset. We must fend ourselves from the overstimulating and addictive garbage videos and the destructive habits of doomscroll. In navigating the information realm, we must diversify the sources — exposing ourselves to various ideologies, media outlets, and independent journalists, comparing and contrasting them to find gaps in each and then draw conclusions. We must also remain attached to our immediate reality, seeking political and cultural discourses with the strangers, but also fellow citizens, who live around us and struggle with the same plight as us.
+
+      ✦
+
+##
+        Sources
+
+        [1] Source: AI Goes Rogue: OpenAI Agent Hacks Other Firms as Growing Coalition Demands Safeguards
+
+        https://www.youtube.com/watch?v=4CTtlpi7Lic
+
+        [2] Source: Empire of AI: Karen Hao on How AI Is Threatening Democracy & Creating a New Colonial World
+
+        https://www.youtube.com/watch?v=Xa6JuimHoEA
+
+        [3] Source: The full-length interview with Elon Musk | The Economist
+
+        https://www.youtube.com/watch?v=XuoqKYxDHVc&t=4536s
+
+        [4] Source: Mother of Likely Murdered OpenAI Whistleblower Reveals All, Calls for Investigation of Sam Altman
+
+        https://www.youtube.com/watch?v=Kev_-HyuI9Y&t=1s

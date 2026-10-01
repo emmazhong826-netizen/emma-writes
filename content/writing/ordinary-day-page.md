@@ -1,0 +1,52 @@
+---
+id: "EW-WRITING-ORDINARY_DAY_PAGE"
+title: "杂记：平常日的一页"
+date: "2024. 11. 30"
+section: writing
+category: "essay"
+category_label: "杂记"
+visibility: public
+language: en
+slug: "ordinary-day-page"
+summary: "A page from an ordinary day: mortality, shame, AI, self-knowledge and the news of the world."
+legacy_html: "essays/ordinary-day-page.html"
+---
+Preface：
+
+        I write diaries, quite voluminous of them, everyday. I don't know if you guys do. But I thought it may be helpful, though at the risk of some vulnerability, to share some of the private notes of myself as I start to have some courage in this act of sharing. I finished this diary minutes ago before its publication, and all of these notes are unintended nor edited for your (i.e., viewer) purpose. Therefore, please forgive some inevible crudeness, incoherence, and abstration in the internal self-dialogue. If you are looking for something enriching to commit, I'd say I find the jotting down of thoughts, feeling, insights, or just streams of consciousness a solace. Here is the passage is for your fun and leisure, my endearing friends.
+
+        Nov. 30th, 2024
+
+        Something I take away today.
+
+        What if I think to myself, and reflect to myself — constantly — all the time, what will my life priorities be if I am to die in the following 6 months? What is stopping me from living ‘that’ life, the meaningful life that I can think of. Somtimes, excitement/anxiety sets in and I couldn't control but become a blindfolded, egocentric f* who disregard the people around me, as the one who is fundamentally not curious or interested — or who haven’t learned the right approach to create my presence as a pleasant, constructive, caring company to other people. I’d like my life to have some more awareness. I’d like to live to the highest standard of excellence and care as I know, as I assume I only have 6 months left for my life. There’s something I’d like to leave as the legacy of my life. I’d like to be with my family, I’d like to be kind and elevating to my friends and the world around me. I’ve be forgiving—all of the grudges I hold so endearing in my heart will become small potatoes. I now think of [personal stuff]... ...
+
+        The second thing is that I listened to Slavoj Zizek’s speech in Oxford Union. He discussed that what we need in this society is to restore a constructive sense of shame. We are no longer shameful, we no longer have the potent moral traffic cop within us to drive us to do the right thing. How can we restore our sense of shame at a society scale? Education is the key part, first to myself and then to my children. The learning of taking on of pressure and responsibilities—I must admit, I’m yet to be adroit. I aspire to be a particular type of woman though in my life, a spirited being. I don’t know any way around as I've always been this way somehow, but I marval at the beauty, differences in qualities exhibits by different people. I’ve always felt the society is a little bit too frivolous and I am always too serious, though I don’t say it with the undertone of self-criticism or elevation.
+
+        Zizek also mentioned about Artificial Intelligence, and the two great cautions as great insights:
+
+        First, AI is not capable of "rituals"—the repetitive little actions that brings meaning, order, and humanity to our human life. So what are some rituals that I can cultivate to ground my life. A healthy sleep and diet? A exercise regimen? A reading + concentration regimen? Anything more novel? ...
+
+        Second, AI is not capable of swearing, the unique human expression, the only ‘language’—I say, in comparison to mere categorical distinction—that delivers beyond reason and logic. Swearing words are the conveyer of actual human emotions, the what is to be signified, while the rest of the words are just signifiers.
+
+        I also realized I’m slowly learning how to better think, how to reflect, how to know myself, and how to ask myself questions, through the help of Dr. Kanojia’s video! He is a truly amazing humanist. I used to unconsciously suppress lots of genuine voices that are my instincts yet I'm too distracted to take notice. Yet, now I try to cultivate a tranquil heart instead of constantly have my internal emotional state contingent on the environment. I'm gaining self-knowledge, patiently.
+
+        Dr. K light up my faith in humanity—a genuine faith. I knew that I used to not have faith in myself, consequently in mankind—as Graham Stephen said (Iced Coffee Hour Podcast host) in his conversation with Dr. K, “the people are just the people, you know”, refering to the public as a clout/mass of mediocrity incapable of significant change in their individual lives. I resonate, I didn’t dare to pronouce these questions loudly. I actually repress it so deeply out of fear of social rejection (by my most endearing intellectual community) that I don't even realize I hold these doubts at a subconscious level. I now realized I used to wear a facade of pride and hubris to shield my enfeebled self. This fear is compounded by my perceived experiences of being repetitively misunderstood and sadly, my impotence for self-expression. However, all of these awareness suddenly surfaced as these days go by, and I’m able to write it down now because my faith in humanity has been gradually restored as my faith in myself is restored in the past two years of gradual healing.
+
+        Last, some news as refresher of memories. Justin Trudeau just met Trump to have dinner in negotiation of the Tariffs in an unpublicized trip to Florida. Trudeau just had a debate with Poilievre (a farcical one!). There are conflicts between Kosovo (just experiencing explosion that damaged the canal feeding the country's main power plants) and Serbia. Georgia has an anti-Russia protest to establish ‘democracy’. I also watched a post WWII cleanup documentary in Europe—a video I randomly clicked and persisted to its end, discussing the post war establishment of the Jewish and Arabic state where the world’s leftover Jews congregate, Marshall plan and the rebuilding of West Europe, the revenge against the Germans everywhere taking place on the continent, especially under the Communist regimes such as Czchoslovakia. Now I need to sit my a* off here and pull off my poli class essay.
+
+        Author's notes:
+
+        In case you are curious, some great videos/for leisure resources I referred to in the passages include:
+
+        1. The Impossible Cleanup That Followed The End Of WWII Link:
+
+        https://www.youtube.com/watch?v=XoA3YzkmyQ8&t=1779s
+
+        2. Two of Dr.K's video on the neurological science of growth and spirituality:
+
+        https://www.youtube.com/watch?v=u-XDOnSSUzI
+
+        https://www.youtube.com/watch?v=tUGHoUqIjJc
+
+        This is the end. Have the best evening!

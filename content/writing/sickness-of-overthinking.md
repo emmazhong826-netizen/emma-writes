@@ -1,0 +1,34 @@
+---
+id: "EW-WRITING-SICKNESS_OF_OVERTHINKING"
+title: "社会评论：On the Sickness of Overthinking"
+date: "2024. 7. 24"
+section: writing
+category: "commentary"
+category_label: "社会评论"
+visibility: public
+language: en
+slug: "sickness-of-overthinking"
+summary: "An existentialist response to overthinking, bad faith, action and the responsibilities of freedom."
+legacy_html: "essays/sickness-of-overthinking.html"
+---
+We humans all face the problem of the "bad faith". To behave in "bad faith" is to act as if we are not free to make autonomous choices. It is an voluntary denial of our freedom and responsibilities.
+
+        A well-articulated example of bad faith comes from French existentialist Jean-Paul Sartre. Sartre writes in Existentialism is a Humanism,
+
+        "Our [existentialist] docterine horrifies people. They have no other way of putting up their misery than to think: circumstances have been against me, I deserve a much better life than the one I have. Admittedly, I have never experienced a great love or extraordinary friendship; but that is because I never met a man or women worthy of it; If I have written no great books, it is because I never had the leisure to do so; If I have had no children to whom I can devote myself, it is because I have never find a man with whom I could share my life. So I have within me a host of untried but perfectly viable attributes, inclinations, and possibilities that endow me with worthiness not evident from examination of any of my past actions."
+
+        However, to the existentialists, there is no love other than the deeds of love... there is no genius other than that is expressed in the work of art; the genius of Proust resides in the totality of his works, the genius of Racine is found in the series of his tragedies, outside of which there is nothing. We are the sum of our actions. Reality alone — but not our dreams, expectations, and hopes — counts. The latter only serve to define a man as a broken dream, aborted hopes, and futile expectations.
+
+        This seems harsh to us who have not made a fortune out of life. However, I only present the existentialist framework as one of the many perspectives avail — not the truth — but hopefully a new tool that informs thoughts and our orientation in the world.
+
+        The phenomenon (or I call it sickness) of overthinking is normalized among the Generation Z (born 1997-2012) in established, industrialized Western societies, and is spreading globally. To offer an existentialist response, our life — unlike a knife that is created by design to cut open our deliciousness — is meaningless upon birth. It is through the actions that we start to define what our purpose in life is going to be. In other words, we create our own purpose, our project of life through repeated everyday work, so does the purose conceal the fundamental basis of our self-esteem and true confidence.
+
+        We learn, if anything at all, through doing them. Aristotle speaks in Nicomachean Ethics, Book II ,
+
+        "The virtues we get by first exercising them, as also happens in the case of the arts as well. For the things we have to learn before we can do them, we learn by doing them; for instance, men become builders by building and lyreplayers by playing the lyre; so too we become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts.”
+
+        We become adroit at aspects of life — in becoming a self-aware, displined, sentient being in rapport with self, others, and nature — through constinous practices and growth in circumstances of discomforts, frictions, and disappointments. In wisdom of French philosopher Simone de Beauvoir, life is one of continuous change, an unstable system where balance is continously lost and recovered. It would be delusional to think we can scrape any of the 'negative' experiences. Maybe a courageous embrace to challenges, and a vow to active and responsible living that takes care of our physical and mental self is the cure to our perpetual narcissistic self- absoiption and disgracing.
+
+        With love,
+
+        2024. 7.24

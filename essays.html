@@ -1,1824 +1,729 @@
 <!DOCTYPE html>
-
 <html lang="zh-CN">
 
-
-
 <head>
-
-
-
   <meta charset="UTF-8">
-
-
-
-  <meta
-
-    name="viewport"
-
-    content="width=device-width, initial-scale=1.0"
-
-  >
-
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Writing — Emma Writes</title>
 
-
-
   <meta
-
     name="description"
-
     content="Essays, prose, reading notes, social commentary and poetry by Emma Zhong."
-
   >
 
-
-
-  <link
-
-    rel="stylesheet"
-
-    href="style.css?v=10"
-
-  >
-
-
-
+  <link rel="stylesheet" href="style.css?v=10">
 
   <style>
-    /* =========================================================
-       WRITING ARCHIVE — STATS + SEARCH
-       Page-specific styles only. No changes to style.css needed.
-    ========================================================== */
-
     .archive-tools {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto 26px;
+      max-width: 1100px;
+      margin: 0 auto 54px;
+      padding: 0 6vw;
     }
 
     .archive-stats {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       gap: 8px;
-      margin: 0 0 18px;
-      line-height: 1.7;
+      margin-bottom: 22px;
     }
 
     .archive-stat-button {
-      appearance: none;
-      border: 1px solid rgba(91, 39, 47, 0.14);
-      border-radius: 999px;
+      border: 1px solid #d6c5b2;
       background: transparent;
-      color: rgba(43, 35, 31, 0.58);
-      padding: 5px 11px;
-      font: inherit;
-      font-size: 0.78rem;
-      letter-spacing: 0.02em;
+      color: #75685c;
+      padding: 8px 12px;
       cursor: pointer;
-      transition:
-        color 160ms ease,
-        border-color 160ms ease,
-        background 160ms ease;
-    }
-
-    .archive-stat-button:hover {
-      color: rgba(91, 39, 47, 0.92);
-      border-color: rgba(91, 39, 47, 0.28);
-      background: rgba(91, 39, 47, 0.035);
+      font: inherit;
     }
 
     .archive-stat-button.active {
-      color: rgba(91, 39, 47, 0.96);
-      border-color: rgba(91, 39, 47, 0.34);
-      background: rgba(91, 39, 47, 0.07);
+      color: #992f2b;
+      border-color: #992f2b;
     }
 
-    .archive-search-wrap {
-      position: relative;
-      max-width: 680px;
+    .archive-search-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      max-width: 620px;
     }
 
     .archive-search {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 13px 46px 13px 42px;
-      border: 1px solid rgba(91, 39, 47, 0.20);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.34);
-      color: #2b231f;
+      flex: 1;
+      padding: 12px 14px;
+      border: 1px solid #d6c5b2;
+      background: transparent;
+      color: inherit;
       font: inherit;
-      font-size: 0.95rem;
-      line-height: 1.4;
-      outline: none;
-      transition:
-        border-color 180ms ease,
-        background 180ms ease,
-        box-shadow 180ms ease;
-    }
-
-    .archive-search::placeholder {
-      color: rgba(43, 35, 31, 0.42);
-    }
-
-    .archive-search:focus {
-      border-color: rgba(91, 39, 47, 0.46);
-      background: rgba(255, 255, 255, 0.58);
-      box-shadow: 0 0 0 3px rgba(91, 39, 47, 0.06);
-    }
-
-    .archive-search-icon {
-      position: absolute;
-      left: 16px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: rgba(91, 39, 47, 0.62);
-      font-size: 0.95rem;
-      pointer-events: none;
     }
 
     .archive-search-clear {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: none;
-      width: 28px;
-      height: 28px;
-      padding: 0;
       border: 0;
-      border-radius: 50%;
       background: transparent;
-      color: rgba(43, 35, 31, 0.50);
-      font-size: 1.1rem;
-      line-height: 1;
       cursor: pointer;
-    }
-
-    .archive-search-clear:hover {
-      background: rgba(91, 39, 47, 0.06);
-      color: rgba(43, 35, 31, 0.82);
-    }
-
-    .archive-search-clear.visible {
-      display: block;
+      font: inherit;
+      color: #75685c;
     }
 
     .archive-search-meta {
-      min-height: 22px;
-      margin-top: 8px;
-      color: rgba(43, 35, 31, 0.46);
-      font-size: 0.76rem;
-      line-height: 1.5;
+      margin-top: 12px;
+      color: #8b796b;
+      font-size: 13px;
     }
 
-    .archive-search-meta .search-result-count {
-      color: rgba(91, 39, 47, 0.78);
+    .archive-item.hidden {
+      display: none;
     }
 
     .archive-empty {
       display: none;
-      padding: 54px 0 18px;
-      text-align: center;
-      color: rgba(43, 35, 31, 0.48);
+      padding: 28px 0;
+      color: #75685c;
     }
 
     .archive-empty.visible {
       display: block;
     }
-
-    .archive-empty p {
-      margin: 0;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 680px) {
-      .archive-tools {
-        width: min(100% - 28px, 1120px);
-        margin-bottom: 22px;
-      }
-
-      .archive-stats {
-        gap: 7px;
-      }
-
-      .archive-stat-button {
-        font-size: 0.74rem;
-        padding: 5px 10px;
-      }
-
-      .archive-search {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        font-size: 0.9rem;
-      }
-    }
   </style>
-
 </head>
-
-
-
-
 
 <body>
 
-
-
-
-
-  <!-- =========================================================
-
-       HEADER
-
-  ========================================================== -->
-
-
-
   <header class="site-header">
-
-
-
-    <a
-
-      href="index.html"
-
-      class="logo"
-
-    >
-
-      Emma Writes
-
-    </a>
-
-
-
-
+    <a href="index.html" class="logo">Emma Writes</a>
 
     <nav class="nav">
-
-
-
-      <a href="essays.html">
-
-        Writing
-
-      </a>
-
-
-
-      <a href="dayeye.html">
-
-        Oral History
-
-      </a>
-
-
-
-      <a href="academic.html">
-
-        Academic
-
-      </a>
-
-
-
-      <a href="index.html#about">
-
-        About
-
-      </a>
-
-
-
+      <a href="essays.html">Writing</a>
+      <a href="dayeye.html">Oral History</a>
+      <a href="work.html">Work Notes</a>
+      <a href="academic.html">Academic</a>
+      <a href="index.html#about">About</a>
     </nav>
-
-
-
   </header>
-
-
-
-
-
-
 
   <main>
 
-
-
-
-
-    <!-- =========================================================
-
-         HERO
-
-    ========================================================== -->
-
-
-
     <section class="archive-hero">
+      <p class="eyebrow">WRITING</p>
 
-
-
-      <p class="eyebrow">
-
-        WRITING
-
-      </p>
-
-
-
-      <h1>
-
-        人间书写
-
-      </h1>
-
-
+      <h1>人间书写</h1>
 
       <p class="archive-intro">
-
         杂记、散文、读后感、社会评论与诗歌。
-
         <br>
-
         写我看见的人，也写我正在经历和思考的世界。
-
       </p>
-
-
-
     </section>
 
-
-
-
-
-
-
-    
-
-    <!-- =========================================================
-         ARCHIVE TOOLS
-         Counts are generated automatically from .archive-item.
-         Search indexes article titles + article body text.
-    ========================================================== -->
-
-    <section class="archive-tools" aria-label="Writing archive tools">
-
+    <section class="archive-tools">
       <div
         class="archive-stats"
         id="archive-stats"
-        aria-live="polite"
       ></div>
 
-      <div class="archive-search-wrap">
-
-        <span
-          class="archive-search-icon"
-          aria-hidden="true"
-        >⌕</span>
-
+      <div class="archive-search-row">
         <input
           class="archive-search"
           id="archive-search"
           type="search"
-          placeholder="搜索标题或正文…"
+          placeholder="搜索标题或全文…"
           autocomplete="off"
-          spellcheck="false"
-          aria-label="搜索文章标题或正文"
         >
 
         <button
           class="archive-search-clear"
           id="archive-search-clear"
           type="button"
-          aria-label="清除搜索"
-          title="清除搜索"
-        >×</button>
-
+        >
+          Clear
+        </button>
       </div>
 
       <div
         class="archive-search-meta"
         id="archive-search-meta"
-        aria-live="polite"
-      >
-        正在建立全文索引…
-      </div>
-
-      <div
-        class="archive-empty"
-        id="archive-empty"
-        aria-live="polite"
-      >
-        <p>没有找到匹配的文章。</p>
-      </div>
-
+      ></div>
     </section>
-
-
-    <!-- =========================================================
-
-         FILTERS
-
-    ========================================================== -->
-
-
-
-    <section class="filter-section">
-
-
-
-      <div class="filter-bar">
-
-
-
-        <button
-
-          class="filter-button active"
-
-          data-filter="all"
-
-          type="button"
-
-        >
-
-          ALL
-
-        </button>
-
-
-
-        <button
-
-          class="filter-button"
-
-          data-filter="essay"
-
-          type="button"
-
-        >
-
-          杂记
-
-        </button>
-
-
-
-        <button
-
-          class="filter-button"
-
-          data-filter="prose"
-
-          type="button"
-
-        >
-
-          散文
-
-        </button>
-
-
-
-        <button
-
-          class="filter-button"
-
-          data-filter="reading"
-
-          type="button"
-
-        >
-
-          读后感
-
-        </button>
-
-
-
-        <button
-
-          class="filter-button"
-
-          data-filter="commentary"
-
-          type="button"
-
-        >
-
-          社会评论
-
-        </button>
-
-
-
-        <button
-
-          class="filter-button"
-
-          data-filter="poem"
-
-          type="button"
-
-        >
-
-          诗歌
-
-        </button>
-
-
-
-      </div>
-
-
-
-    </section>
-
-
-
-
-
-
-
-    <!-- =========================================================
-
-         ARCHIVE
-
-    ========================================================== -->
-
-
 
     <section class="archive-section">
-
-
-
       <div class="archive-list">
-<a
 
+        <a
           href="essays/life-called-poetry.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 9. 29</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：有一种生活，叫诗</h2>
-
             <p>不需要一切都有意义。有些时候，美就是意义本身。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/heights-of-despair.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 9. 27</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：在绝望之巅</h2>
-
             <p>读齐奥朗：关于绝望、自由、孤独，以及活生命而不是仅仅生存。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/shankaka.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 9. 24</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：山咖咖</h2>
-
             <p>关于孤独、音乐、被看见，以及重新愿意表达的时刻。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/hemingway.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 9. 21</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：冷眼里的温度</h2>
-
             <p>读海明威《乞力马扎罗山的雪》：关于战争、死亡、感官，以及冷峻文字里仍然保有的人性温度。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/rootedness.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 9. 19</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：扎根</h2>
-
             <p>关于家庭、legacy、rootedness，以及如何成为一个文化的继承者和扩展者。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/calm-and-passionate.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 9. 10</span>
-
           </div>
 
-
-
-          <div class="archive-title long-title">
-
+          <div class="archive-title">
             <h2>读后感：冷静但热情地看待这个世界</h2>
-
             <p>在朱锐、加缪与齐奥朗之间，寻找一种既冷静又保有生命热度的活法。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/how-to-believe.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 9. 6</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：如何去相信</h2>
-
             <p>当真实的苦难、人的尊严与可能的欺骗纠缠在一起，我们该如何继续相信，又该如何帮助？</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/vancouver-state-of-mind.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 9. 1</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：Vancouver State of Mind</h2>
-
             <p>关于重新找到自己、写作，和一段仍然活在身体里的温哥华经验。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/roast-chicken.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 8. 26</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：烤鸡</h2>
-
             <p>一只刚出炉的烤鸡，一场骑车回家的想象，和重新想起“一个人的生活”有多具体、多好。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/camus-death-penalty.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 8. 22</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：谁有权决定一个人的死亡</h2>
-
             <p>读加缪《思索死刑》：关于司法、人的有限性、怜悯，以及决定另一个人生死的权力。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/guangzhou.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 8. 20</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：落地广州</h2>
-
             <p>回到一座自己曾经生活过却没有记忆的城市，重新工作、扎根，也重新开始生活。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/loved-by-life.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 8. 8</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：被爱照亮过的人</h2>
-
             <p>旧照片、指甲、奶奶现炒的一盘生菜，和那些足以温暖一生的爱。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/fall-of-the-mayflower.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2026. 8. 7</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：The Fall of the Mayflower</h2>
-
             <p>On memory, loss, and accepting a love that had neither roots nor fruits.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/fertility-crisis.html"
-
           class="archive-item"
-
           data-category="commentary"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>社会评论</span>
-
             <span>2026. 8. 3</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>社会评论：生育危机的另一面</h2>
-
             <p>关于生育率、精子数量下降、环境毒素与生殖健康。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/sunlight-musings.html"
-
           class="archive-item"
-
           data-category="commentary"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>社会评论</span>
-
             <span>2026. 8. 2</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>社会评论：Sunlight Musings</h2>
-
-            <p>On European Immigration Crisis & AI.</p>
-
+            <p>On European Immigration Crisis &amp; AI.</p>
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/beauty-begins-with-desire.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 7. 22</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：美开始于渴望</h2>
-
             <p>读高更：美、野性、孤独，以及一个人如何为自己的生命负责。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/human-essence.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 7. 21</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：人的本质</h2>
-
             <p>读达芬奇：文化、历史、人的境况，以及对生活本源保持好奇。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/light-is-life.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 7. 17</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：光就是生命本身</h2>
-
             <p>读莫奈：光、美与生命一样，都无法被真正占有，只能在经过时感受。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/only-writing-is-real.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 7. 15</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：只有文字是真实的</h2>
-
             <p>一个梦、一根脐带，以及写作作为存在证据的时刻。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/home-alone.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 7. 13</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：Home Alone</h2>
-
             <p>On coming home after seven years, belonging nowhere entirely, and beginning to build a life again.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/life-spent-waiting.html"
-
           class="archive-item"
-
           data-category="reading"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>读后感</span>
-
             <span>2026. 7. 10</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>读后感：在等待中度过一生</h2>
-
             <p>读李娟《羊道·春牧场》：牧民、等待、死亡，以及草原上沉默发生的一生。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/subjectivity.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 7. 8</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：我的主体性</h2>
-
             <p>一个人看书、写字、迷失在文字里，也重新意识到自己的主体性。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/my-own-place.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 7. 6</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：我有自己的位子了</h2>
-
             <p>第一次在中国，不以父母孩子的身份，而以自己的身份融入一个集体。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/i-want-to-belong-here.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 7. 1</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：我想属于这里</h2>
-
             <p>归国之后，一个人怎样重新理解“属于”自己的家乡。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/mosquito-soy-milk.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 6. 29</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：那碗有蚊子的豆浆</h2>
-
             <p>跑步把人的粉饰都踩碎，最后落在一碗漂着死蚊子的豆浆里。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/inheritance-of-sweat.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 6. 26</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：汗水和努力的传承</h2>
-
             <p>一顿饭、一场劳动，以及从爷爷那里继承下来的汗水与努力。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/face-pain.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 6. 25</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：直视痛苦</h2>
-
             <p>从梵高到现实中的女性：直视痛苦，也重新学会共情自己。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/light-and-dark.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 6. 24</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：站在光与暗的交汇处</h2>
-
             <p>失去、封闭、重新思考，以及站在光与暗交汇处的自我。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/shopping-and-vanity.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 6. 21</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>杂记：购物与虚荣心</h2>
-
             <p>家具、消费、被看见的欲望，以及人与人之间应有的尊重。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
-
-
-
 
 
         <a
-
           href="essays/grandmas-dinner-table.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 6. 20</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>散文：奶奶的饭桌</h2>
-
             <p>奶奶的爱藏在饭菜、虾、空碗和一整桌关于“吃什么”的话里。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
-<a
+
+
+        <a
           href="essays/something-in-me-i-want-to-deny.html"
           class="archive-item"
           data-category="prose"
         >
-
           <div class="archive-meta">
             <span>散文</span>
             <span>2026. 5. 28</span>
@@ -1830,15 +735,14 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
+
 
         <a
           href="essays/eastern-canada-travel.html"
           class="archive-item"
           data-category="prose"
         >
-
           <div class="archive-meta">
             <span>散文</span>
             <span>2026. 5</span>
@@ -1850,566 +754,280 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
-
-
-
-
-
-
-
-
         <a
-
           href="essays/not-your-crucifixion.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2026. 4. 7</span>
-
           </div>
 
-
-
-          <div class="archive-title long-title">
-
+          <div class="archive-title">
             <h2>诗歌：Not Your Crucifixion, Just My Disappointments</h2>
-
             <p>On promises, tenderness, disappointment and the loneliness left behind.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/when-lucidity-knocks.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2026. 3. 25</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：When Lucidity Knocks</h2>
-
             <p>On uprootedness, freedom, writing, sanity and the return of hope.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/scintillating-encounters.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 3. 9</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：Scintillating Encounters</h2>
-
             <p>Books, strangers, friendship, classical music and the encounters that make university life feel alive.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/lady-play.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2026. 3. 8</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：Lady Play</h2>
-
             <p>On performance, vulnerability, desire and what it means to truly see a woman.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/wars-sanity-armageddon.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2026. 3. 7</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：Wars, Sanity, and Armageddon</h2>
-
             <p>On war, dread, sanity and the fragile borders of ordinary life.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/self-as-method.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 3. 3</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：自我作为方法</h2>
-
             <p>关于写作、阅读、爱情、自我认识，以及如何把自己的生命经验变成理解世界的方法。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/happening.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 2. 26</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：Happening</h2>
-
             <p>一次考试前安静的下午，一种只发生一次的亲密。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/sweet-troubles.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 2. 23</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：甜蜜的烦恼</h2>
-
             <p>政治、爱情、多巴胺和一颗不肯安静的年轻的心。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/if-everything-passes.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 2. 20</span>
-
           </div>
 
-
-
-          <div class="archive-title long-title">
-
+          <div class="archive-title">
             <h2>杂记：如果万事都一笑而过，还有什么意思呢？</h2>
-
             <p>关于安慰、孤独、记忆、自由，以及为什么有些事情值得认真地痛一次。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/love-mumble.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 2. 5</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：Love Mumble</h2>
-
             <p>On love, projection, eros, autonomy and the return of sobriety.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/way-home.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 1. 31</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：回家路上</h2>
-
             <p>一趟温哥华的巴士，一车彼此无法抵达的人，以及一个普通夜晚里的城市切面。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/no-contact-encounter.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 1. 29</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>杂记：没有联系方式的巧遇</h2>
-
             <p>哲学社团、欧洲青年、东欧文学，以及没有联系方式时反而更值得期待的下一次见面。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
-
-
-
 
 
         <a
-
           href="essays/useless-teacher.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 1. 27</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>杂记：“无用”的老师</h2>
-
             <p>从编辑学生论文，到独立思考、自由与一个文明为什么需要年轻人的判断力。</p>
-
           </div>
 
+          <div class="archive-arrow">→</div>
+        </a>
 
+
+        <a
+          href="essays/no-energy.html"
+          class="archive-item"
+          data-category="essay"
+        >
+          <div class="archive-meta">
+            <span>杂记</span>
+            <span>2026. 1. 19</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>杂记：我真的是没劲儿了</h2>
+            <p>十个小时的学习、芒果干、万家灯火，以及疲惫里重新冒出来的一点儿兴致。</p>
+          </div>
 
           <div class="archive-arrow">→</div>
-
-
-
         </a>
+
 
         <a
           href="essays/umbrella-for-my-past-self.html"
           class="archive-item"
           data-category="prose"
         >
-
           <div class="archive-meta">
             <span>散文</span>
             <span>2026. 1. 16–17</span>
@@ -2421,491 +1039,109 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
-
-
-
-
-
-
         <a
-
-          href="essays/no-energy.html"
-
-          class="archive-item"
-
-          data-category="essay"
-
-        >
-
-
-
-          <div class="archive-meta">
-
-            <span>杂记</span>
-
-            <span>2026. 1. 19</span>
-
-          </div>
-
-
-
-          <div class="archive-title">
-
-            <h2>杂记：我真的是没劲儿了</h2>
-
-            <p>十个小时的学习、芒果干、万家灯火，以及疲惫里重新冒出来的一点儿兴致。</p>
-
-          </div>
-
-
-
-          <div class="archive-arrow">→</div>
-
-
-
-        </a>
-
-
-
-
-
-        <a
-
           href="essays/qianqian-good-dreams.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2026. 1. 8</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：千千好梦</h2>
-
             <p>关于学习、毕业前夕、房间，与一个人在异乡最后半年的生活。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/father-is-a-hole.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2026. 1. 3</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：爸爸是个洞</h2>
-
             <p>父亲像一个深不见底的洞，也像一个不断向下凿地的人。</p>
-
-          </div>
-
-
-
-          <div class="archive-arrow">→</div>
-
-
-
-        </a>
-
-
-
-
-
-
-
-        <!-- =====================================================
-
-             NEW — VANCOUVER RAIN
-
-        ====================================================== -->
-
-        <a
-          href="essays/sick.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：生病</h2>
-            <p>一次发烧和被照顾的经历，让我重新理解脆弱、依赖，以及为什么活着本身值得珍惜。</p>
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
         <a
-          href="essays/pin-down-shame.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：扎住羞耻</h2>
-            <p>从毛手毛脚、他人的眼光和三毛的文字里，重新学习不带评判地接受自己。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/crying-days.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：痛哭的时光</h2>
-            <p>从一次次失声痛哭，到发现自己的笑终于不再是一副社交铠甲。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/faint-sadness.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：淡淡的忧伤</h2>
-            <p>关于“do nothing”的自我、缓慢、无用的思考，以及如何在现实中保留一个人的生命空间。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/way-of-life.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：生活方式</h2>
-            <p>生活方式从来不只是习惯：它由家庭和时代塑造，也可以在看见之后重新选择。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/books-are-loyal.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：看书吧，孩子</h2>
-            <p>在离开温哥华前的宿舍里，写字、失去、孤独，最后只剩一句：看书吧，孩子。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/unwinnable-battle.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：打不赢的仗</h2>
-            <p>从工厂大院的童年记忆，到一个“乖小孩”如何学会服从，也如何重新把自己捡回来。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/my-own-room.html"
-          class="archive-item"
-          data-category="prose"
-        >
-
-          <div class="archive-meta">
-            <span>散文</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>散文：自己的房间</h2>
-            <p>拥有自己的房间，也意味着重新拥有自己的身体、边界和人生。</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-        <a
-          href="essays/trust.html"
-          class="archive-item"
-          data-category="essay"
-        >
-
-          <div class="archive-meta">
-            <span>杂记</span>
-            <span>日期未记</span>
-          </div>
-
-          <div class="archive-title">
-            <h2>杂记：TRUST</h2>
-            <p>On misunderstanding, loneliness, adaptation, and learning to trust oneself.</p>
-          </div>
-
-          <div class="archive-arrow">→</div>
-
-        </a>
-
-
-
-
-
-
-        <a
-
-          href="essays/vancouver-rain.html"
-
-          class="archive-item"
-
-          data-category="prose"
-
-        >
-
-
-
-          <div class="archive-meta">
-
-            <span>散文</span>
-
-            <span>2025. 12. 31</span>
-
-          </div>
-
-
-
-          <div class="archive-title">
-
-            <h2>散文：温哥华的雨</h2>
-
-            <p>温哥华的冬雨、七年留学，以及写作如何从选择变成孤独内心的一种需要。</p>
-
-          </div>
-
-
-
-          <div class="archive-arrow">
-
-            →
-
-          </div>
-
-
-
-        </a>
-
-
-
-
-
-
-
-        <!-- =====================================================
-
-             NEW — LONELY LIFE
-
-        ====================================================== -->
-
-
-
-        <a
-
           href="essays/lonely-life.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2025. 12. 31</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>散文：孤独的生活</h2>
-
             <p>一间温哥华 Studio、书、音乐、夜晚与欲望，以及一个人在异乡七年之后重新望向自己。</p>
-
           </div>
 
-
-
-          <div class="archive-arrow">
-
-            →
-
-          </div>
-
-
-
+          <div class="archive-arrow">→</div>
         </a>
-
-
-
-
-
 
 
         <a
-
-          href="essays/world-keeps-turning.html"
-
+          href="essays/vancouver-rain.html"
           class="archive-item"
-
-          data-category="essay"
-
+          data-category="prose"
         >
-
-
-
           <div class="archive-meta">
-
-            <span>杂记</span>
-
+            <span>散文</span>
             <span>2025. 12. 31</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
-            <h2>杂记：世界仍在转动</h2>
-
-            <p>2025年的最后一天：温哥华、世界、时间，以及仍然发生着的希望。</p>
-
+            <h2>散文：温哥华的雨</h2>
+            <p>温哥华的冬雨、七年留学，以及写作如何从选择变成孤独内心的一种需要。</p>
           </div>
 
+          <div class="archive-arrow">→</div>
+        </a>
 
+
+        <a
+          href="essays/world-keeps-turning.html"
+          class="archive-item"
+          data-category="essay"
+        >
+          <div class="archive-meta">
+            <span>杂记</span>
+            <span>2025. 12. 31</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>杂记：世界仍在转动</h2>
+            <p>2025年的最后一天：温哥华、世界、时间，以及仍然发生着的希望。</p>
+          </div>
 
           <div class="archive-arrow">→</div>
-
-
-
         </a>
+
 
         <a
           href="essays/christmas-eve.html"
           class="archive-item"
           data-category="prose"
         >
-
           <div class="archive-meta">
             <span>散文</span>
             <span>2025. 12. 24</span>
@@ -2917,690 +1153,318 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
-
-
-
-
-
-
         <a
-
           href="essays/rest-under-music.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2025. 9. 6</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：乐下小憩</h2>
-
             <p>音乐、自然、爱与希望，在一场短暂的小憩里重新排列。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/curse-of-knowledge.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2025. 8. 15</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：知识的诅咒</h2>
-
             <p>当知识、判断和自我要求变得太厚，人还能不能重新允许自己被爱、被影响、被世界触动？</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/nature-pace.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2025. 7. 20</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：自然的配速</h2>
-
             <p>在 Bowen Island，重新感受生活真正的配速。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/love-enchantment.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2025. 7. 17</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>组诗：LOVE ENCHANTMENT</h2>
-
             <p>A poetry cycle on memory, devotion, tenderness and carrying love after separation.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/concrete-life.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2025. 6. 2</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：回到具体的生活</h2>
-
             <p>从情绪、自我规训和宏大思考，重新回到烟台、责任与具体生活。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/modern-addiction.html"
-
           class="archive-item"
-
           data-category="commentary"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>社会评论</span>
-
             <span>2025. 4. 16</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>社会评论：现代人上的“瘾”</h2>
-
             <p>On addiction, escapism, modern life, dopamine, and why individual suffering also has a social environment.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/why-humanities.html"
-
           class="archive-item"
-
           data-category="commentary"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>社会评论</span>
-
             <span>2024. 12. 18</span>
-
           </div>
 
-
-
-          <div class="archive-title long-title">
-
+          <div class="archive-title">
             <h2>社会评论：我们为什么还需要人文学科</h2>
-
             <p>On liberal arts, culture, meaning, and how a humanities student might carry those skills into contemporary society.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/university-as-business.html"
-
           class="archive-item"
-
           data-category="commentary"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>社会评论</span>
-
             <span>2024. 12. 6</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>社会评论：当大学成为一门生意</h2>
-
             <p>On the marketization of higher education, student debt, bureaucracy, and what universities are failing to teach.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/ordinary-day-page.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2024. 11. 30</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：平常日的一页</h2>
-
             <p>A page from an ordinary day: mortality, shame, AI, self-knowledge and the news of the world.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/love-fantasy.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2024. 11. 26</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：爱情幻想</h2>
-
             <p>关于爱情的祛魅、语言的有限，以及想要真正看见另一个人的愿望。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/love-is-not-unrequited.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2024. 11. 23</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：Love Is Not Unrequited</h2>
-
             <p>On emotional exposure, missed reciprocity and the memory of a love that escaped.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/sickness-of-overthinking.html"
-
           class="archive-item"
-
           data-category="commentary"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>社会评论</span>
-
             <span>2024. 7. 24</span>
-
           </div>
 
-
-
-          <div class="archive-title long-title">
-
+          <div class="archive-title">
             <h2>社会评论：On the Sickness of Overthinking</h2>
-
             <p>An existentialist response to overthinking, bad faith, action and the responsibilities of freedom.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/night-of-stars.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2024. 7. 6</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>诗歌：A Night of Stars</h2>
-
             <p>Stars, surrender, tenderness and the cracks through which light enters.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/with-the-sunrise.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2024. 5. 18</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：随着太阳升起</h2>
-
             <p>Haydn、墨西哥、陌生人的善意，以及重新相信自己与世界。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
           href="essays/letter-to-20s.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2024. 3. 11</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>散文：A Letter to Our 20s</h2>
-
             <p>A letter to the twenties: freedom, responsibility, survival and the frontier life.</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
-
-
-
 
 
         <a
-
           href="essays/i-search-for-you.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2024. 2. 21</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>散文：“我”永远在寻找“你”</h2>
-
             <p>关于关系、自我、被看见，以及重新投入真实世界。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
+
 
         <a
           href="essays/siddhartha.html"
           class="archive-item"
           data-category="reading"
         >
-
           <div class="archive-meta">
             <span>读后感</span>
             <span>2023. 5</span>
@@ -3612,102 +1476,52 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
-
-
-
-
-
-
         <a
-
           href="essays/faith.html"
-
           class="archive-item"
-
           data-category="poem"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>诗歌</span>
-
             <span>2023. 3. 17</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>诗歌：信仰</h2>
-
             <p>在时代、漂流与自我之间，寻找一枚能够钩住河床的锚。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
-
-
-
 
 
         <a
-
           href="essays/hospital-stories.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2023. 3. 15</span>
-
           </div>
-
-
 
           <div class="archive-title">
-
             <h2>杂记：看病趣闻</h2>
-
             <p>两次看病：一场漫长急诊，以及一段关于政治学有没有出路的对话。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
+
 
         <a
           href="essays/ermao-tired.html"
           class="archive-item"
           data-category="prose"
         >
-
           <div class="archive-meta">
             <span>散文</span>
             <span>2022. 12</span>
@@ -3719,228 +1533,109 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
-
-
-
-
-
-
         <a
-
           href="essays/uncoupled-life.html"
-
           class="archive-item"
-
           data-category="prose"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>散文</span>
-
             <span>2022. 11. 29</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>散文：脱钩的生活</h2>
-
             <p>生活突然脱钩以后，一段安静、失重又仍在继续的日子。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
-          href="essays/things-and-purposes.html"
-
-          class="archive-item"
-
-          data-category="essay"
-
-        >
-
-
-
-          <div class="archive-meta">
-
-            <span>杂记</span>
-
-            <span>2022. 11. 24</span>
-
-          </div>
-
-
-
-          <div class="archive-title">
-
-            <h2>杂记：现代人的“事儿”和“目的”</h2>
-
-            <p>一张桌子、一把椅子，以及现代人的“事儿”和“目的”。</p>
-
-          </div>
-
-
-
-          <div class="archive-arrow">→</div>
-
-
-
-        </a>
-
-
-
-
-
-        <a
-
           href="essays/late-night-mom.html"
-
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
             <span>2022. 11. 24</span>
-
           </div>
 
-
-
           <div class="archive-title">
-
             <h2>杂记：深夜对谈老妈</h2>
-
             <p>凌晨一点，一边赶论文，一边和妈妈聊命、谨慎、健康与生活。</p>
-
           </div>
 
-
-
           <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
-
-
-
         <a
-
-          href="essays/winter-favorite.html"
-
+          href="essays/things-and-purposes.html"
           class="archive-item"
-
           data-category="essay"
-
         >
-
-
-
           <div class="archive-meta">
-
             <span>杂记</span>
-
-            <span>2022. 10. 22</span>
-
+            <span>2022. 11. 24</span>
           </div>
-
-
-
-          <div class="archive-title long-title">
-
-            <h2>杂记：我正式决定自己最喜欢的季节是冬季</h2>
-
-            <p>冬日清晨把童年、父亲和现在的生活重新铺开在眼前。</p>
-
-          </div>
-
-
-
-          <div class="archive-arrow">→</div>
-
-
-
-        </a>
-
-
-
-
-
-        <a
-
-          href="essays/grandma-hearing.html"
-
-          class="archive-item"
-
-          data-category="prose"
-
-        >
-
-
-
-          <div class="archive-meta">
-
-            <span>散文</span>
-
-            <span>2022. 10. 16</span>
-
-          </div>
-
-
 
           <div class="archive-title">
-
-            <h2>散文：奶奶慢慢聋了</h2>
-
-            <p>第一次真正看见一个最爱的人慢慢衰老，也看见她守住尊严的方式。</p>
-
+            <h2>杂记：现代人的“事儿”和“目的”</h2>
+            <p>一张桌子、一把椅子，以及现代人的“事儿”和“目的”。</p>
           </div>
 
+          <div class="archive-arrow">→</div>
+        </a>
 
+
+        <a
+          href="essays/winter-favorite.html"
+          class="archive-item"
+          data-category="essay"
+        >
+          <div class="archive-meta">
+            <span>杂记</span>
+            <span>2022. 10. 22</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>杂记：我正式决定自己最喜欢的季节是冬季</h2>
+            <p>冬日清晨把童年、父亲和现在的生活重新铺开在眼前。</p>
+          </div>
 
           <div class="archive-arrow">→</div>
-
-
-
         </a>
+
+
+        <a
+          href="essays/grandma-hearing.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>2022. 10. 16</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：奶奶慢慢聋了</h2>
+            <p>第一次真正看见一个最爱的人慢慢衰老，也看见她守住尊严的方式。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
 
         <a
           href="essays/take-it-slow.html"
           class="archive-item"
           data-category="prose"
         >
-
           <div class="archive-meta">
             <span>散文</span>
             <span>2022. 7. 22</span>
@@ -3952,15 +1647,33 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
+
+
+        <a
+          href="essays/grandfather.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>2022. 7. 21</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：我一点都不了解我的爷爷</h2>
+            <p>一个从旧时代走出来、很少谈自己的爷爷，以及孙女试图理解他的开始。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
 
         <a
           href="essays/sea.html"
           class="archive-item"
           data-category="poem"
         >
-
           <div class="archive-meta">
             <span>诗歌</span>
             <span>2022</span>
@@ -3972,55 +1685,6 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
-        </a>
-
-
-
-
-
-
-
-
-
-
-
-        <a
-
-          href="essays/grandfather.html"
-
-          class="archive-item"
-
-          data-category="prose"
-
-        >
-
-
-
-          <div class="archive-meta">
-
-            <span>散文</span>
-
-            <span>2022. 7. 21</span>
-
-          </div>
-
-
-
-          <div class="archive-title long-title">
-
-            <h2>散文：我一点都不了解我的爷爷</h2>
-
-            <p>一个从旧时代走出来、很少谈自己的爷爷，以及孙女试图理解他的开始。</p>
-
-          </div>
-
-
-
-          <div class="archive-arrow">→</div>
-
-
-
         </a>
 
 
@@ -4029,7 +1693,6 @@
           class="archive-item"
           data-category="poem"
         >
-
           <div class="archive-meta">
             <span>诗歌</span>
             <span>2021. 7. 6</span>
@@ -4041,9 +1704,64 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
+
+        <a
+          href="essays/books-are-loyal.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：看书吧，孩子</h2>
+            <p>在离开温哥华前的宿舍里，写字、失去、孤独，最后只剩一句：看书吧，孩子。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
+
+        <a
+          href="essays/crying-days.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：痛哭的时光</h2>
+            <p>从一次次失声痛哭，到发现自己的笑终于不再是一副社交铠甲。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
+
+        <a
+          href="essays/faint-sadness.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：淡淡的忧伤</h2>
+            <p>关于“do nothing”的自我、缓慢、无用的思考，以及如何在现实中保留一个人的生命空间。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
 
 
         <a
@@ -4051,7 +1769,6 @@
           class="archive-item"
           data-category="poem"
         >
-
           <div class="archive-meta">
             <span>诗歌</span>
             <span>日期未记</span>
@@ -4063,61 +1780,142 @@
           </div>
 
           <div class="archive-arrow">→</div>
-
         </a>
 
 
+        <a
+          href="essays/my-own-room.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：自己的房间</h2>
+            <p>拥有自己的房间，也意味着重新拥有自己的身体、边界和人生。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
 
 
+        <a
+          href="essays/pin-down-shame.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：扎住羞耻</h2>
+            <p>从毛手毛脚、他人的眼光和三毛的文字里，重新学习不带评判地接受自己。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
 
 
+        <a
+          href="essays/sick.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：生病</h2>
+            <p>一次发烧和被照顾的经历，让我重新理解脆弱、依赖，以及为什么活着本身值得珍惜。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
+
+        <a
+          href="essays/trust.html"
+          class="archive-item"
+          data-category="essay"
+        >
+          <div class="archive-meta">
+            <span>杂记</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>杂记：TRUST</h2>
+            <p>On misunderstanding, loneliness, adaptation, and learning to trust oneself.</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
+
+        <a
+          href="essays/unwinnable-battle.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：打不赢的仗</h2>
+            <p>从工厂大院的童年记忆，到一个“乖小孩”如何学会服从，也如何重新把自己捡回来。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
+
+        <a
+          href="essays/way-of-life.html"
+          class="archive-item"
+          data-category="prose"
+        >
+          <div class="archive-meta">
+            <span>散文</span>
+            <span>日期未记</span>
+          </div>
+
+          <div class="archive-title">
+            <h2>散文：生活方式</h2>
+            <p>生活方式从来不只是习惯：它由家庭和时代塑造，也可以在看见之后重新选择。</p>
+          </div>
+
+          <div class="archive-arrow">→</div>
+        </a>
+
+
+        <div
+          class="archive-empty"
+          id="archive-empty"
+        >
+          没有找到匹配的文章。
+        </div>
       </div>
-
-
-
     </section>
-
-
-
-
 
   </main>
 
 
-
-
-
-
-
-  <!-- =========================================================
-
-       FOOTER
-
-  ========================================================== -->
-
-
-
   <footer>
-
-
-
-    <p>
-
-      © <span id="year"></span> Emma Zhong
-
-    </p>
-
-
-
-    <p class="footer-note">
-
-      Emma Writes
-
-    </p>
-
-
-
+    <p>© <span id="year"></span> Emma Zhong</p>
+    <p class="footer-note">Written slowly. Kept carefully.</p>
   </footer>
+
+  <script src="script.js?v=6"></script>
+
 
   <script>
     (() => {
@@ -4137,269 +1935,244 @@
         "poem"
       ];
 
-      const year = document.getElementById("year");
-      const items = Array.from(document.querySelectorAll(".archive-item"));
-      const filterButtons = Array.from(document.querySelectorAll(".filter-button"));
-      const stats = document.getElementById("archive-stats");
-      const searchInput = document.getElementById("archive-search");
-      const clearButton = document.getElementById("archive-search-clear");
-      const searchMeta = document.getElementById("archive-search-meta");
-      const emptyState = document.getElementById("archive-empty");
+      const items = Array.from(
+        document.querySelectorAll(
+          ".archive-item"
+        )
+      );
 
+      const stats =
+        document.getElementById(
+          "archive-stats"
+        );
+
+      const input =
+        document.getElementById(
+          "archive-search"
+        );
+
+      const clear =
+        document.getElementById(
+          "archive-search-clear"
+        );
+
+      const meta =
+        document.getElementById(
+          "archive-search-meta"
+        );
+
+      const empty =
+        document.getElementById(
+          "archive-empty"
+        );
+
+      let index = [];
       let activeCategory = "all";
-      let searchQuery = "";
-      let searchIndex = [];
-      let searchReady = false;
+      let query = "";
 
-      if (year) {
-        year.textContent = new Date().getFullYear();
-      }
-
-      function normalizeText(value) {
-        return String(value || "")
+      function normalize(value) {
+        return String(
+          value || ""
+        )
           .toLowerCase()
           .normalize("NFKC")
           .replace(/\s+/g, " ")
           .trim();
       }
 
-      function normalizeHref(value) {
-        return String(value || "")
-          .replace(/^\.\//, "")
-          .split("#")[0]
-          .split("?")[0];
-      }
-
       function renderStats() {
-        if (!stats) return;
+        const counts = {};
 
-        const categoryCounts = items.reduce((counts, item) => {
-          const category = item.dataset.category;
-          counts[category] = (counts[category] || 0) + 1;
-          return counts;
-        }, {});
+        items.forEach(item => {
+          const category =
+            item.dataset.category;
 
-        const buttons = [];
+          counts[category] =
+            (counts[category] || 0)
+            + 1;
+        });
 
-        buttons.push(`
-          <button
-            class="archive-stat-button active"
-            type="button"
-            data-stat-filter="all"
-          >
-            共 ${items.length} 篇
-          </button>
-        `);
+        const parts = [
+          `<button class="archive-stat-button active" data-category-filter="all" type="button">共 ${items.length} 篇</button>`
+        ];
 
-        CATEGORY_ORDER.forEach((category) => {
-          const count = categoryCounts[category] || 0;
+        CATEGORY_ORDER.forEach(
+          category => {
+            const count =
+              counts[category]
+              || 0;
 
-          if (count > 0) {
-            buttons.push(`
-              <button
-                class="archive-stat-button"
-                type="button"
-                data-stat-filter="${category}"
-              >
-                ${CATEGORY_LABELS[category]} ${count}
-              </button>
-            `);
+            if (count) {
+              parts.push(
+                `<button class="archive-stat-button" data-category-filter="${category}" type="button">${CATEGORY_LABELS[category]} ${count}</button>`
+              );
+            }
           }
-        });
-
-        stats.innerHTML = buttons.join("");
-
-        stats.querySelectorAll(".archive-stat-button").forEach((button) => {
-          button.addEventListener("click", () => {
-            setCategory(button.dataset.statFilter || "all");
-          });
-        });
-      }
-
-      function syncCategoryButtons() {
-        filterButtons.forEach((button) => {
-          button.classList.toggle(
-            "active",
-            (button.dataset.filter || "all") === activeCategory
-          );
-        });
-
-        document.querySelectorAll(".archive-stat-button").forEach((button) => {
-          button.classList.toggle(
-            "active",
-            (button.dataset.statFilter || "all") === activeCategory
-          );
-        });
-      }
-
-      function setCategory(category) {
-        activeCategory = category || "all";
-        syncCategoryButtons();
-        applyFilters();
-      }
-
-      async function loadSearchIndex() {
-        if (searchMeta) {
-          searchMeta.textContent = "正在加载全文索引…";
-        }
-
-        try {
-          const response = await fetch("search-index.json", {
-            cache: "no-cache"
-          });
-
-          if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-          }
-
-          const rawIndex = await response.json();
-
-          searchIndex = rawIndex.map((article) => ({
-            href: normalizeHref(article.href),
-            title: normalizeText(article.title),
-            content: normalizeText(article.content)
-          }));
-
-          searchReady = true;
-          applyFilters();
-        } catch (error) {
-          console.error("Failed to load search-index.json", error);
-          searchReady = false;
-
-          if (searchMeta) {
-            searchMeta.textContent =
-              "全文索引加载失败。请先运行 python3 build-search-index.py，并通过 GitHub Pages 或本地服务器打开页面。";
-          }
-        }
-      }
-
-      function findArticleRecord(item) {
-        const href = normalizeHref(item.getAttribute("href"));
-        return searchIndex.find((article) => article.href === href);
-      }
-
-      function matchesSearch(item) {
-        if (!searchQuery) {
-          return true;
-        }
-
-        const article = findArticleRecord(item);
-
-        if (article) {
-          return (
-            article.title.includes(searchQuery) ||
-            article.content.includes(searchQuery)
-          );
-        }
-
-        const visibleTitle = normalizeText(
-          item.querySelector(".archive-title h2")?.textContent || ""
         );
 
-        return visibleTitle.includes(searchQuery);
+        stats.innerHTML =
+          parts.join("");
+
+        stats
+          .querySelectorAll(
+            ".archive-stat-button"
+          )
+          .forEach(button => {
+            button.addEventListener(
+              "click",
+              () => {
+                activeCategory =
+                  button.dataset
+                    .categoryFilter;
+
+                stats
+                  .querySelectorAll(
+                    ".archive-stat-button"
+                  )
+                  .forEach(b => {
+                    b.classList.toggle(
+                      "active",
+                      b.dataset
+                        .categoryFilter
+                        === activeCategory
+                    );
+                  });
+
+                apply();
+              }
+            );
+          });
       }
 
-      function matchesCategory(item) {
-        return (
-          activeCategory === "all" ||
-          item.dataset.category === activeCategory
+      function recordFor(item) {
+        const href =
+          item.getAttribute(
+            "href"
+          );
+
+        return index.find(
+          record =>
+            record.href === href
         );
       }
 
-      function applyFilters() {
-        let visibleCount = 0;
+      function apply() {
+        let visible = 0;
 
-        items.forEach((item) => {
-          const shouldShow =
-            matchesCategory(item) &&
-            matchesSearch(item);
+        items.forEach(item => {
+          const categoryMatch =
+            activeCategory === "all"
+            ||
+            item.dataset.category
+              === activeCategory;
 
-          item.classList.toggle("hidden", !shouldShow);
+          let searchMatch = true;
 
-          if (shouldShow) {
-            visibleCount += 1;
+          if (query) {
+            const record =
+              recordFor(item);
+
+            if (record) {
+              searchMatch =
+                record.search
+                  .includes(query);
+            } else {
+              searchMatch =
+                normalize(
+                  item.textContent
+                ).includes(query);
+            }
+          }
+
+          const show =
+            categoryMatch
+            &&
+            searchMatch;
+
+          item.classList.toggle(
+            "hidden",
+            !show
+          );
+
+          if (show) {
+            visible += 1;
           }
         });
 
-        if (emptyState) {
-          emptyState.classList.toggle("visible", visibleCount === 0);
-        }
-
-        updateSearchMeta(visibleCount);
-      }
-
-      function updateSearchMeta(visibleCount) {
-        if (!searchMeta) return;
-
-        if (searchQuery) {
-          if (!searchReady) {
-            searchMeta.textContent = "正在等待全文索引…";
-            return;
-          }
-
-          searchMeta.innerHTML =
-            `<span class="search-result-count">找到 ${visibleCount} 篇</span>`;
-          return;
-        }
-
-        if (activeCategory !== "all") {
-          const label = CATEGORY_LABELS[activeCategory] || "该分类";
-          searchMeta.textContent = `${label} · ${visibleCount} 篇`;
-          return;
-        }
-
-        if (searchReady) {
-          searchMeta.textContent =
-            `已加载 ${searchIndex.length} 篇文章的全文索引`;
-        }
-      }
-
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          setCategory(button.dataset.filter || "all");
-        });
-      });
-
-      searchInput?.addEventListener("input", () => {
-        searchQuery = normalizeText(searchInput.value);
-
-        clearButton?.classList.toggle(
+        empty.classList.toggle(
           "visible",
-          searchQuery.length > 0
+          visible === 0
         );
 
-        applyFilters();
-      });
-
-      clearButton?.addEventListener("click", () => {
-        if (!searchInput) return;
-
-        searchInput.value = "";
-        searchQuery = "";
-        clearButton.classList.remove("visible");
-        searchInput.focus();
-        applyFilters();
-      });
-
-      searchInput?.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          searchInput.value = "";
-          searchQuery = "";
-          clearButton?.classList.remove("visible");
-          applyFilters();
+        if (query) {
+          meta.textContent =
+            `找到 ${visible} 篇`;
+        } else {
+          meta.textContent =
+            `全文索引：${index.length} 篇`;
         }
-      });
+      }
+
+      input.addEventListener(
+        "input",
+        () => {
+          query = normalize(
+            input.value
+          );
+
+          apply();
+        }
+      );
+
+      clear.addEventListener(
+        "click",
+        () => {
+          input.value = "";
+          query = "";
+          input.focus();
+          apply();
+        }
+      );
 
       renderStats();
-      syncCategoryButtons();
-      applyFilters();
-      loadSearchIndex();
+
+      fetch(
+        "search-index.json",
+        {
+          cache: "no-cache"
+        }
+      )
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(
+              "Could not load search-index.json"
+            );
+          }
+
+          return response.json();
+        })
+        .then(data => {
+          index = data.map(
+            record => ({
+              ...record,
+              search: normalize(
+                `${record.title || ""} ${record.content || ""}`
+              )
+            })
+          );
+
+          apply();
+        })
+        .catch(error => {
+          console.error(error);
+
+          meta.textContent =
+            "全文索引加载失败。";
+
+          apply();
+        });
     })();
   </script>
 
-
 </body>
-
-
-
 </html>

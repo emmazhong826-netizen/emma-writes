@@ -1,0 +1,26 @@
+---
+id: "EW-WRITING-SCINTILLATING_ENCOUNTERS"
+title: "杂记：Scintillating Encounters"
+date: "2026. 3. 9"
+section: writing
+category: "essay"
+category_label: "杂记"
+visibility: public
+language: en
+slug: "scintillating-encounters"
+summary: "Books, strangers, friendship, classical music and the encounters that make university life feel alive."
+legacy_html: "essays/scintillating-encounters.html"
+---
+There are lots of things that fill my mind. I wouldn’t say that they bother me. They just sit in my mind, taking a spot. It’s difficult not to think about them. It’s also difficult to decide when to think about what.
+
+        I was holding Albert Camus’s The Outsider when I was ordering coffee. This acquaintance nodded to me, pointing to the book and asked, “do you show that to everyone?”
+
+        What a ridiculous question, which simultaneously shows how ridiculous his mind is!
+
+        “No,” I can’t help but react, in apparant disbelief. Though I immediately soothed myself. People will make their little speculations, as always. And you keep living your life. It does not matter at the end of the day. Nothing matters.
+
+        Just now, I woke up with a sore throat. I cancelled the meeting with a friend supposed to happen this morning, lest I give her my sickness. It took a little time for me to realize that I was tired. Mentally strained. Composure is not always a fixture, and mustering the strength to put it all together is hard from time to time. I appreciate my friends, they  allowed  frustrations to take off that otherwise would not have come to my attention while wrecking havocs.
+
+        Back track further, last night, I met a new guy of Cuban descent hanging out with some friends. I've heard so much about the mysterious and happy 'welfare state' (Despite the long gone passage of the good old days—economic sanction since 1962 dragged the Cuban economy into its historical nadir). I grabbed him tight and interrogated him. Like I was presented with a light bulb for the first time in life, and became utterly enamored uponing seeing the warm, scintillating radiance. I studied him attentively and intensely, but of course, without expressing anything that anyone can put a finger on. He was well-educated. He was timely, for my purpose. I was hoping to plan a trip to Latin America in the foreseeable future. We had good conversations, and I ended up gifting him a book I just finished, Anne Berest’s “Postcard” . The novel narrates a genealogical story of slavic Jews during World War II. I thought it may help his cousin to produce a life documentary about his aunt, who is similarly of Jewish descent. Good conversations like this are what university is for, I spoke to him. We shake hands heartily. I felt alive and energized to focus again.
+
+        Perhaps one last thing worthy to put on the table, I invited Hugo for an orchestra concert. My friend, who played as a violinist, gave me two free tickets. There are three pieces, Overture to Die Zauberflöte (The Magic Flute), K. 620, Beethoven: Leonore Overture No. 3, Op. 72, and Beethoven: Symphony No. 3 in E-flat major, Op. 55, “Eroica”. The music carried both of us away. My heart turned porus—as it has always been—but at the moment it is further stripped of all camouflage and pretension. I was swept away by the magic stroke the sound that filled the physical space and saturated my world; I was once again a defenceless child. My breaths changed with the river flow of the music. I almost forgot to breathe. Elated one second and brimmed with sorrow the next. This is eventful. I wouldn't have imagined for music to shake me this much. I was sure, years ago, I was not ready to appreciate classical music as such. I wasn't so feeling last time I stepped out of the performance center. It must be that I've grown more astute tasting buds for art, aesthetics and the human emotions as time passes.
