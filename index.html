@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 
+
+
 <html lang="zh-CN">
+
+
+
+
 
 
 
@@ -8,17 +14,35 @@
 
 
 
+
+
+
+
   <meta charset="UTF-8">
+
+
+
+
 
 
 
   <meta
 
+
+
     name="viewport"
+
+
 
     content="width=device-width, initial-scale=1.0"
 
+
+
   >
+
+
+
+
 
 
 
@@ -26,13 +50,27 @@
 
 
 
+
+
+
+
   <meta
+
+
 
     name="description"
 
+
+
     content="Emma Writes — writing, memory, oral history and academic work by Emma Zhong."
 
+
+
   >
+
+
+
+
 
 
 
@@ -42,13 +80,29 @@
 
 
 
+
+
+
+
+
+
   <!--
+
+
 
     HOME PAGE ONLY
 
+
+
     These styles only affect index.html.
 
-  -->
+
+
+  \-->
+
+
+
+
 
 
 
@@ -56,25 +110,51 @@
 
 
 
+
+
+
+
     /* ========================================
+
+
 
        HERO
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .emma-cover {
 
+
+
       position: relative;
+
+
+
+
 
 
 
       width: 100%;
 
+
+
       height: 100vh;
 
+
+
       min-height: 680px;
+
+
+
+
 
 
 
@@ -82,9 +162,21 @@
 
 
 
+
+
+
+
       background: #9f1f1f;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -92,7 +184,13 @@
 
     .emma-cover-image {
 
+
+
       position: absolute;
+
+
+
+
 
 
 
@@ -100,9 +198,19 @@
 
 
 
+
+
+
+
       width: 100%;
 
+
+
       height: 100%;
+
+
+
+
 
 
 
@@ -110,23 +218,49 @@
 
 
 
+
+
+
+
       /*
+
+
 
         The illustration is already designed
 
+
+
         with text-space on the left
+
+
 
         and the woman on the right.
 
+
+
       */
+
+
 
       object-position: center center;
 
 
 
+
+
+
+
       z-index: 0;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -134,17 +268,33 @@
 
     /*
 
+
+
       Very subtle layer only.
 
+
+
       We do NOT darken the artwork.
+
+
 
     */
 
 
 
+
+
+
+
     .emma-cover-wash {
 
+
+
       position: absolute;
+
+
+
+
 
 
 
@@ -152,27 +302,53 @@
 
 
 
+
+
+
+
       z-index: 1;
+
+
+
+
 
 
 
       background:
 
+
+
         linear-gradient(
+
+
 
           90deg,
 
+
+
           rgba(72, 9, 9, 0.16) 0%,
+
+
 
           rgba(72, 9, 9, 0.07) 38%,
 
+
+
           rgba(72, 9, 9, 0.00) 65%
+
+
 
         );
 
 
 
+
+
+
+
       pointer-events: none;
+
+
 
     }
 
@@ -182,23 +358,51 @@
 
 
 
+
+
+
+
+
+
+
+
     /* ========================================
+
+
 
        NAVIGATION
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .emma-cover-header {
 
+
+
       position: absolute;
+
+
+
+
 
 
 
       top: 0;
 
+
+
       left: 0;
+
+
+
+
 
 
 
@@ -206,21 +410,45 @@
 
 
 
+
+
+
+
       padding: 29px 4.5vw;
+
+
+
+
 
 
 
       display: flex;
 
+
+
       justify-content: space-between;
+
+
 
       align-items: center;
 
 
 
+
+
+
+
       z-index: 5;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -228,11 +456,21 @@
 
     .emma-cover-logo {
 
+
+
       color: #f5d9a6;
 
+
+
       text-shadow:
+
         0 1px 2px rgba(44, 9, 8, 0.55),
+
         0 2px 8px rgba(44, 9, 8, 0.28);
+
+
+
+
 
 
 
@@ -240,25 +478,53 @@
 
 
 
+
+
+
+
       font-family:
+
+
 
         "Times New Roman",
 
+
+
         "Songti SC",
+
+
 
         serif;
 
 
 
+
+
+
+
       font-size: 21px;
+
+
 
       font-weight: 400;
 
 
 
+
+
+
+
       letter-spacing: 0.2px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -266,13 +532,27 @@
 
     .emma-cover-nav {
 
+
+
       display: flex;
+
+
+
+
 
 
 
       gap: 34px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -280,11 +560,21 @@
 
     .emma-cover-nav a {
 
+
+
       color: rgba(255, 231, 189, 0.88);
 
+
+
       text-shadow:
+
         0 1px 2px rgba(44, 9, 8, 0.55),
+
         0 2px 8px rgba(44, 9, 8, 0.28);
+
+
+
+
 
 
 
@@ -292,11 +582,23 @@
 
 
 
+
+
+
+
       font-family:
+
+
 
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -304,7 +606,15 @@
 
 
 
+
+
+
+
       letter-spacing: 2px;
+
+
+
+
 
 
 
@@ -312,9 +622,21 @@
 
 
 
+
+
+
+
       transition: color 0.2s ease;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -322,9 +644,21 @@
 
     .emma-cover-nav a:hover {
 
+
+
       color: #ffd486;
 
+
+
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -334,27 +668,55 @@
 
     /* ========================================
 
+
+
        HERO TEXT
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .emma-cover-content {
 
+
+
       position: absolute;
+
+
 
       left: 7.5vw;
 
+
+
       top: 50%;
+
+
 
       transform: translateY(-46%);
 
+
+
       width: min(620px, 44vw);
+
+
 
       z-index: 4;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -362,37 +724,75 @@
 
 .emma-cover-content h1 {
 
+
+
       margin: 0;
+
+
 
       max-width: 620px;
 
+
+
       color: #f4d7a2;
 
+
+
       font-family:
+
         "Times New Roman",
+
         Georgia,
+
         serif;
+
+
 
       font-size: clamp(42px, 4.4vw, 66px);
 
+
+
       font-weight: 400;
+
+
 
       line-height: 0.98;
 
+
+
       letter-spacing: -1.8px;
 
+
+
       text-shadow:
+
         0 2px 2px rgba(63, 13, 10, 0.18),
+
         0 8px 22px rgba(63, 13, 10, 0.12);
+
     }
+
+
 
     .emma-cover-content h1 span {
+
       display: block;
+
     }
 
+
+
     .emma-cover-content h1 span + span {
+
       margin-top: 0.06em;
+
     }
+
+
+
+
+
+
 
 
 
@@ -400,7 +800,13 @@
 
     .emma-cover-cn {
 
+
+
       margin-top: 29px;
+
+
+
+
 
 
 
@@ -408,30 +814,61 @@
 
 
 
+
+
+
+
       font-size: 15px;
+
+
+
+
 
 
 
       line-height: 1.9;
 
+
+
     }
+
 /* ========================================
+
+
 
        SCROLL
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .emma-scroll {
 
+
+
       position: absolute;
+
+
+
+
 
 
 
       left: 7vw;
 
+
+
       bottom: 35px;
+
+
+
+
 
 
 
@@ -439,9 +876,19 @@
 
 
 
+
+
+
+
       display: flex;
 
+
+
       align-items: center;
+
+
+
+
 
 
 
@@ -449,7 +896,15 @@
 
 
 
+
+
+
+
       color: rgba(255, 231, 189, 0.68);
+
+
+
+
 
 
 
@@ -457,11 +912,23 @@
 
 
 
+
+
+
+
       font-family:
+
+
 
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -469,9 +936,21 @@
 
 
 
+
+
+
+
       letter-spacing: 2.1px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -479,13 +958,27 @@
 
     .emma-scroll-arrow {
 
+
+
       font-size: 15px;
+
+
+
+
 
 
 
       transition: transform 0.2s ease;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -493,9 +986,21 @@
 
     .emma-scroll:hover .emma-scroll-arrow {
 
+
+
       transform: translateY(4px);
 
+
+
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -505,27 +1010,55 @@
 
     /* ========================================
 
+
+
        ARCHIVE
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .home-archive-new {
 
+
+
       padding:
+
+
 
         130px
 
+
+
         6vw
+
+
 
         150px;
 
 
 
+
+
+
+
       background: #f6eddf;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -533,13 +1066,27 @@
 
     .home-archive-intro {
 
+
+
       max-width: 700px;
+
+
+
+
 
 
 
       margin-bottom: 95px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -547,7 +1094,13 @@
 
     .home-archive-label {
 
+
+
       margin-bottom: 22px;
+
+
+
+
 
 
 
@@ -555,11 +1108,23 @@
 
 
 
+
+
+
+
       font-family:
+
+
 
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -567,9 +1132,21 @@
 
 
 
+
+
+
+
       letter-spacing: 2.5px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -577,7 +1154,13 @@
 
     .home-archive-intro h2 {
 
+
+
       margin-bottom: 23px;
+
+
+
+
 
 
 
@@ -585,7 +1168,15 @@
 
 
 
+
+
+
+
       font-weight: 400;
+
+
+
+
 
 
 
@@ -593,9 +1184,21 @@
 
 
 
+
+
+
+
       letter-spacing: -2px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -603,7 +1206,13 @@
 
     .home-archive-intro p:last-child {
 
+
+
       max-width: 530px;
+
+
+
+
 
 
 
@@ -611,11 +1220,21 @@
 
 
 
+
+
+
+
       font-size: 17px;
 
 
 
+
+
+
+
       line-height: 1.9;
+
+
 
     }
 
@@ -625,17 +1244,39 @@
 
 
 
+
+
+
+
+
+
+
+
     /* ========================================
+
+
 
        ARCHIVE ROWS
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .home-index-entry {
 
+
+
       min-height: 225px;
+
+
+
+
 
 
 
@@ -643,19 +1284,39 @@
 
 
 
+
+
+
+
       display: grid;
+
+
+
+
 
 
 
       grid-template-columns:
 
+
+
         72px
+
+
 
         180px
 
+
+
         minmax(0, 1fr)
 
+
+
         105px;
+
+
+
+
 
 
 
@@ -663,7 +1324,15 @@
 
 
 
+
+
+
+
       align-items: start;
+
+
+
+
 
 
 
@@ -671,7 +1340,15 @@
 
 
 
+
+
+
+
       color: #2a1d19;
+
+
+
+
 
 
 
@@ -679,13 +1356,29 @@
 
 
 
+
+
+
+
       transition:
 
-*background* 0.2s ease,
+
+
+**background** 0.2s ease,
+
+
 
         padding-left 0.2s ease;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -693,9 +1386,19 @@
 
     .home-index-entry:last-child {
 
+
+
       border-bottom: 1px solid #d6c5b2;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -703,13 +1406,27 @@
 
     a.home-index-entry:hover {
 
+
+
       background: #eedfcd;
+
+
+
+
 
 
 
       padding-left: 28px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -717,15 +1434,29 @@
 
     .home-index-number {
 
+
+
       color: #8b796b;
+
+
+
+
 
 
 
       font-family:
 
+
+
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -733,9 +1464,21 @@
 
 
 
+
+
+
+
       letter-spacing: 1px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -743,15 +1486,29 @@
 
     .home-index-label {
 
+
+
       color: #992f2b;
+
+
+
+
 
 
 
       font-family:
 
+
+
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -759,9 +1516,21 @@
 
 
 
+
+
+
+
       letter-spacing: 2px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -769,9 +1538,19 @@
 
     .home-index-main {
 
+
+
       max-width: 700px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -779,7 +1558,13 @@
 
     .home-index-main h3 {
 
+
+
       margin-bottom: 17px;
+
+
+
+
 
 
 
@@ -787,7 +1572,15 @@
 
 
 
+
+
+
+
       font-weight: 400;
+
+
+
+
 
 
 
@@ -795,9 +1588,21 @@
 
 
 
+
+
+
+
       letter-spacing: -1px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -805,11 +1610,21 @@
 
     .home-index-main p {
 
+
+
       max-width: 575px;
 
 
 
+
+
+
+
       color: #75685c;
+
+
+
+
 
 
 
@@ -817,9 +1632,21 @@
 
 
 
+
+
+
+
       line-height: 1.85;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -827,7 +1654,13 @@
 
     .home-index-action {
 
+
+
       padding-top: 7px;
+
+
+
+
 
 
 
@@ -835,11 +1668,23 @@
 
 
 
+
+
+
+
       font-family:
+
+
 
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -847,9 +1692,21 @@
 
 
 
+
+
+
+
       text-align: right;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -857,11 +1714,23 @@
 
     a.home-index-entry:hover
 
+
+
     .home-index-action {
+
+
 
       color: #992f2b;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -869,9 +1738,19 @@
 
     .home-index-muted {
 
+
+
       cursor: default;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -879,13 +1758,23 @@
 
     .home-index-muted
 
+
+
     .home-index-action {
+
+
 
       opacity: 0.55;
 
 
 
+
+
+
+
       font-style: italic;
+
+
 
     }
 
@@ -895,23 +1784,51 @@
 
 
 
+
+
+
+
+
+
+
+
     /* ========================================
+
+
 
        ABOUT
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
     .home-about-new {
 
+
+
       padding:
+
+
 
         135px
 
+
+
         7vw
 
+
+
         150px;
+
+
+
+
 
 
 
@@ -919,9 +1836,21 @@
 
 
 
+
+
+
+
       border-top: 1px solid #d6c5b2;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -929,9 +1858,19 @@
 
     .home-about-title {
 
+
+
       margin-bottom: 68px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -939,7 +1878,13 @@
 
     .home-about-title p {
 
+
+
       margin-bottom: 18px;
+
+
+
+
 
 
 
@@ -947,11 +1892,23 @@
 
 
 
+
+
+
+
       font-family:
+
+
 
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -959,9 +1916,21 @@
 
 
 
+
+
+
+
       letter-spacing: 2.5px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -969,7 +1938,13 @@
 
     .home-about-title h2 {
 
+
+
       font-size: clamp(42px, 5vw, 68px);
+
+
+
+
 
 
 
@@ -977,13 +1952,29 @@
 
 
 
+
+
+
+
       line-height: 1.06;
+
+
+
+
 
 
 
       letter-spacing: -2px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -991,7 +1982,13 @@
 
     .home-about-title span {
 
+
+
       display: block;
+
+
+
+
 
 
 
@@ -999,7 +1996,15 @@
 
 
 
+
+
+
+
       color: #75685c;
+
+
+
+
 
 
 
@@ -1007,9 +2012,21 @@
 
 
 
+
+
+
+
       letter-spacing: 1px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -1017,17 +2034,33 @@
 
     .home-about-grid {
 
+
+
       display: grid;
+
+
+
+
 
 
 
       grid-template-columns:
 
+
+
         210px
+
+
 
         minmax(0, 650px)
 
+
+
         1fr;
+
+
+
+
 
 
 
@@ -1035,9 +2068,21 @@
 
 
 
+
+
+
+
       align-items: start;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -1045,17 +2090,35 @@
 
     .home-about-grid img {
 
+
+
       width: 175px;
+
+
 
       height: 225px;
 
 
 
+
+
+
+
       object-fit: cover;
+
+
 
       object-position: center top;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -1063,11 +2126,21 @@
 
     .home-about-copy p {
 
+
+
       margin-bottom: 26px;
 
 
 
+
+
+
+
       color: #75685c;
+
+
+
+
 
 
 
@@ -1075,9 +2148,21 @@
 
 
 
+
+
+
+
       line-height: 1.95;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -1085,9 +2170,17 @@
 
     .home-about-copy
 
+
+
     .home-about-lead {
 
+
+
       color: #2a1d19;
+
+
+
+
 
 
 
@@ -1095,9 +2188,21 @@
 
 
 
+
+
+
+
       line-height: 1.8;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -1105,15 +2210,29 @@
 
     .home-about-tags {
 
+
+
       color: #75685c;
+
+
+
+
 
 
 
       font-family:
 
+
+
         Arial,
 
+
+
         sans-serif;
+
+
+
+
 
 
 
@@ -1121,9 +2240,21 @@
 
 
 
+
+
+
+
       letter-spacing: 1.7px;
 
+
+
     }
+
+
+
+
+
+
 
 
 
@@ -1131,7 +2262,11 @@
 
     .home-about-tags p {
 
+
+
       margin-bottom: 14px;
+
+
 
     }
 
@@ -1141,11 +2276,27 @@
 
 
 
+
+
+
+
+
+
+
+
     /* ========================================
+
+
 
        MOBILE
 
-    ======================================== */
+
+
+    \======================================== */
+
+
+
+
 
 
 
@@ -1153,15 +2304,33 @@
 
 
 
+
+
+
+
       .emma-cover {
+
+
 
         height: 100svh;
 
 
 
+
+
+
+
         min-height: 680px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1169,19 +2338,39 @@
 
       /*
 
+
+
         On mobile the image is heavily cropped.
 
+
+
         Keep the woman visible on the right.
+
+
 
       */
 
 
 
+
+
+
+
       .emma-cover-image {
+
+
 
         object-position: 58% center;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1189,21 +2378,43 @@
 
       .emma-cover-wash {
 
+
+
         background:
+
+
 
           linear-gradient(
 
+
+
             90deg,
+
+
 
             rgba(80,12,12,0.24) 0%,
 
+
+
             rgba(80,12,12,0.10) 50%,
+
+
 
             rgba(80,12,12,0.00) 80%
 
+
+
           );
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1211,9 +2422,19 @@
 
       .emma-cover-header {
 
+
+
         padding: 23px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1221,9 +2442,19 @@
 
       .emma-cover-logo {
 
+
+
         font-size: 18px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1231,9 +2462,19 @@
 
       .emma-cover-nav {
 
+
+
         gap: 17px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1241,9 +2482,19 @@
 
       .emma-cover-nav a {
 
+
+
         font-size: 8px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1251,13 +2502,25 @@
 
       .emma-cover-content {
 
+
+
         left: 24px;
+
+
+
+
 
 
 
         top: auto;
 
+
+
         bottom: 105px;
+
+
+
+
 
 
 
@@ -1265,9 +2528,21 @@
 
 
 
+
+
+
+
         width: min(80vw, 390px);
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1275,12 +2550,25 @@
 
       .emma-cover-content h1 {
 
+
+
         font-size: clamp(38px, 11vw, 54px);
+
+
 
         line-height: 0.94;
 
+
+
         letter-spacing: -1.8px;
+
       }
+
+
+
+
+
+
 
 
 
@@ -1288,9 +2576,19 @@
 
       .emma-cover-cn {
 
+
+
         font-size: 13px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1298,13 +2596,27 @@
 
       .emma-scroll {
 
+
+
         left: 24px;
+
+
+
+
 
 
 
         bottom: 29px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1312,15 +2624,31 @@
 
       .home-archive-new {
 
+
+
         padding:
+
+
 
           90px
 
+
+
           24px
+
+
 
           105px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1328,9 +2656,19 @@
 
       .home-archive-intro {
 
+
+
         margin-bottom: 65px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1338,9 +2676,19 @@
 
       .home-archive-intro h2 {
 
+
+
         font-size: 41px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1348,7 +2696,13 @@
 
       .home-index-entry {
 
+
+
         min-height: auto;
+
+
+
+
 
 
 
@@ -1356,21 +2710,45 @@
 
 
 
+
+
+
+
         grid-template-columns:
 
+
+
           40px
+
+
 
           1fr;
 
 
 
+
+
+
+
         gap:
+
+
 
           12px
 
+
+
           18px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1378,9 +2756,19 @@
 
       a.home-index-entry:hover {
 
+
+
         padding-left: 0;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1388,9 +2776,19 @@
 
       .home-index-number {
 
+
+
         grid-column: 1;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1398,9 +2796,19 @@
 
       .home-index-label {
 
+
+
         grid-column: 2;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1408,13 +2816,27 @@
 
       .home-index-main {
 
+
+
         grid-column: 1 / -1;
+
+
+
+
 
 
 
         padding-top: 12px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1422,9 +2844,19 @@
 
       .home-index-main h3 {
 
+
+
         font-size: 33px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1432,7 +2864,13 @@
 
       .home-index-action {
 
+
+
         grid-column: 1 / -1;
+
+
+
+
 
 
 
@@ -1440,9 +2878,21 @@
 
 
 
+
+
+
+
         padding-top: 14px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1450,15 +2900,31 @@
 
       .home-about-new {
 
+
+
         padding:
+
+
 
           90px
 
+
+
           24px
+
+
 
           105px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1466,9 +2932,19 @@
 
       .home-about-title {
 
+
+
         margin-bottom: 50px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1476,9 +2952,19 @@
 
       .home-about-title h2 {
 
+
+
         font-size: 42px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1486,13 +2972,27 @@
 
       .home-about-grid {
 
+
+
         grid-template-columns: 1fr;
+
+
+
+
 
 
 
         gap: 37px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1500,11 +3000,23 @@
 
       .home-about-grid img {
 
+
+
         width: 155px;
+
+
 
         height: 200px;
 
+
+
       }
+
+
+
+
+
+
 
 
 
@@ -1512,36 +3024,73 @@
 
       .home-about-tags {
 
+
+
         display: none;
+
+
 
       }
 
 
 
+
+
+
+
     }
+
+
+
+
+
 
 
 
 
     /* ========================================
+
        FOOTER — HOME PAGE PALETTE
-    ======================================== */
+
+    \======================================== */
+
+
 
     body > footer {
+
       background: #8f2421;
+
       color: rgba(255, 236, 203, 0.82);
+
       border-top: 0;
+
     }
 
+
+
     body > footer .footer-note {
+
       color: rgba(255, 236, 203, 0.62);
+
     }
+
+
 
   </style>
 
 
 
+
+
+
+
 </head>
+
+
+
+
+
+
 
 
 
@@ -1553,11 +3102,25 @@
 
 
 
+
+
+
+
+
+
   <!-- ========================================
+
+
 
        FULL SCREEN COVER
 
-  ========================================= -->
+
+
+  \========================================= -->
+
+
+
+
 
 
 
@@ -1565,15 +3128,31 @@
 
 
 
+
+
+
+
     <img
+
+
 
       src="images/emma.png"
 
+
+
       alt=""
+
+
 
       class="emma-cover-image"
 
+
+
     >
+
+
+
+
 
 
 
@@ -1583,7 +3162,17 @@
 
 
 
+
+
+
+
+
+
     <!-- Navigation -->
+
+
+
+
 
 
 
@@ -1591,17 +3180,37 @@
 
 
 
+
+
+
+
       <a
+
+
 
         href="index.html"
 
+
+
         class="emma-cover-logo"
+
+
 
       >
 
+
+
         Emma Writes
 
+
+
       </a>
+
+
+
+
+
+
 
 
 
@@ -1611,31 +3220,63 @@
 
 
 
+
+
+
+
         <a href="essays.html">
+
+
 
           Writing
 
+
+
         </a>
+
+
+
+
 
 
 
         <a href="#archive">
 
+
+
           Archive
 
+
+
         </a>
+
+
+
+
 
 
 
         <a href="#about">
 
+
+
           About
+
+
 
         </a>
 
 
 
+
+
+
+
       </nav>
+
+
+
+
 
 
 
@@ -1647,17 +3288,43 @@
 
 
 
+
+
+
+
+
+
+
+
     <!-- Hero writing -->
 
 
 
+
+
+
+
     <div class="emma-cover-content">
+
 <h1>
+
         <span>Understand.</span>
+
         <span>Remember.</span>
+
         <span>Become.</span>
+
       </h1>
+
 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1667,31 +3334,61 @@
 
     <a
 
+
+
       href="#archive"
 
+
+
       class="emma-scroll"
+
+
 
     >
 
 
 
+
+
+
+
       <span>
+
+
 
         EXPLORE
 
+
+
       </span>
+
+
+
+
 
 
 
       <span class="emma-scroll-arrow">
 
+
+
         ↓
+
+
 
       </span>
 
 
 
+
+
+
+
     </a>
+
+
+
+
 
 
 
@@ -1703,11 +3400,27 @@
 
 
 
+
+
+
+
+
+
+
+
   <!-- ========================================
+
+
 
        ARCHIVE
 
-  ========================================= -->
+
+
+  \========================================= -->
+
+
+
+
 
 
 
@@ -1715,13 +3428,29 @@
 
 
 
+
+
+
+
     <section
+
+
 
       class="home-archive-new"
 
+
+
       id="archive"
 
+
+
     >
+
+
+
+
+
+
 
 
 
@@ -1731,33 +3460,71 @@
 
 
 
+
+
+
+
         <p class="home-archive-label">
+
+
 
           THE ARCHIVE
 
+
+
         </p>
+
+
+
+
 
 
 
         <h2>
 
+
+
           写下生活，保存时间。
+
+
 
         </h2>
 
 
 
+
+
+
+
         <p>
+
+
 
           这里收录我的公开写作、家族口述史、
 
+
+
           工作中的记录与学术思考。
+
+
 
         </p>
 
 
 
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1769,29 +3536,59 @@
 
 
 
+
+
+
+
       <a
+
+
 
         href="essays.html"
 
+
+
         class="home-index-entry"
+
+
 
       >
 
 
 
+
+
+
+
         <div class="home-index-number">
+
+
 
           01
 
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-label">
 
+
+
           WRITING
 
+
+
         </div>
+
+
+
+
 
 
 
@@ -1799,37 +3596,79 @@
 
 
 
+
+
+
+
           <h3>
 
+
+
             人间书写
+
+
 
           </h3>
 
 
 
+
+
+
+
           <p>
+
+
 
             杂记、散文、读后感、社会评论与诗歌。
 
+
+
             写我看见的人，也写我正在经历和思考的世界。
+
+
 
           </p>
 
 
 
+
+
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-action">
 
+
+
           Explore →
+
+
 
         </div>
 
 
 
+
+
+
+
       </a>
+
+
+
+
+
+
+
+
 
 
 
@@ -1841,29 +3680,59 @@
 
 
 
+
+
+
+
       <a
+
+
 
         href="dayeye.html"
 
+
+
         class="home-index-entry"
+
+
 
       >
 
 
 
+
+
+
+
         <div class="home-index-number">
+
+
 
           02
 
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-label">
 
+
+
           ORAL HISTORY
 
+
+
         </div>
+
+
+
+
 
 
 
@@ -1871,35 +3740,71 @@
 
 
 
+
+
+
+
           <h3>
 
+
+
             《大爷爷的口述》
+
+
 
           </h3>
 
 
 
+
+
+
+
           <p>
+
+
 
             一个关于记忆、家族与时间的长期记录。
 
+
+
             听一个九十多岁的老人讲过去，
 
+
+
             也寻找自己的来处。
+
+
 
           </p>
 
 
 
+
+
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-action">
 
+
+
           Enter →
 
+
+
         </div>
+
+
+
+
 
 
 
@@ -1911,37 +3816,57 @@
 
 
 
+
+
+
+
+
+
+
+
       <!-- 03 WORK NOTES -->
 
-
-
-      <div
-
-        class="
-
-          home-index-entry
-
-          home-index-muted
-
-        "
-
+      <a
+        href="work.html"
+        class="home-index-entry"
       >
+
+
+
+
+
 
 
 
         <div class="home-index-number">
 
+
+
           03
 
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-label">
 
+
+
           WORK NOTES
 
+
+
         </div>
+
+
+
+
 
 
 
@@ -1949,37 +3874,71 @@
 
 
 
+
+
+
+
           <h3>
 
+
+
             工作手记
+
+
 
           </h3>
 
 
 
+
+
+
+
           <p>
+
+
 
             关于教育、学生、产品、传播与日常工作的记录。
 
+
+
             有些问题，只有真正做起来之后才会出现。
+
+
 
           </p>
 
 
 
+
+
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-action">
 
-          In progress
+
+
+          Enter →
+
+
 
         </div>
 
 
 
-      </div>
+
+
+
+
+      </a>
 
 
 
@@ -1991,29 +3950,59 @@
 
 
 
+
+
+
+
       <a
+
+
 
         href="academic.html"
 
+
+
         class="home-index-entry"
+
+
 
       >
 
 
 
+
+
+
+
         <div class="home-index-number">
+
+
 
           04
 
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-label">
 
+
+
           ACADEMIC
 
+
+
         </div>
+
+
+
+
 
 
 
@@ -2021,39 +4010,81 @@
 
 
 
+
+
+
+
           <h3>
 
+
+
             学术写作
+
+
 
           </h3>
 
 
 
+
+
+
+
           <p>
+
+
 
             论文、研究与学术成果。
 
+
+
             关于社会、人格、教育，
 
+
+
             以及人如何成为自己。
+
+
 
           </p>
 
 
 
+
+
+
+
         </div>
+
+
+
+
 
 
 
         <div class="home-index-action">
 
+
+
           View →
+
+
 
         </div>
 
 
 
+
+
+
+
       </a>
+
+
+
+
+
+
 
 
 
@@ -2067,21 +4098,49 @@
 
 
 
+
+
+
+
+
+
+
+
     <!-- ========================================
+
+
 
          ABOUT
 
-    ========================================= -->
+
+
+    \========================================= -->
+
+
+
+
 
 
 
     <section
 
+
+
       class="home-about-new"
+
+
 
       id="about"
 
+
+
     >
+
+
+
+
+
+
 
 
 
@@ -2091,25 +4150,51 @@
 
 
 
+
+
+
+
         <p>
 
+
+
           ABOUT
+
+
 
         </p>
 
 
 
+
+
+
+
         <h2>
+
+
 
           Emma Zhong
 
 
 
+
+
+
+
           <span>
+
+
 
             仲曼琳
 
+
+
           </span>
+
+
+
+
 
 
 
@@ -2117,7 +4202,19 @@
 
 
 
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -2131,7 +4228,17 @@
 
 
 
+
+
+
+
+
+
         <!-- Portrait -->
+
+
+
+
 
 
 
@@ -2139,17 +4246,39 @@
 
 
 
+
+
+
+
           <img
+
+
 
             src="images/emmaselfie.jpg"
 
+
+
             alt="Emma Zhong"
+
+
 
           >
 
 
 
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -2161,57 +4290,119 @@
 
 
 
+
+
+
+
         <div class="home-about-copy">
+
+
+
+
 
 
 
           <p class="home-about-lead">
 
+
+
             I write about people:
+
+
 
             how we become who we are,
 
+
+
             how history lives inside ordinary lives,
+
+
 
             and how we might deliberately shape ourselves.
 
+
+
           </p>
 
 
 
+
+
+
+
           <p>
+
+
 
             我的写作从个人经验出发，
 
+
+
             延伸到家庭记忆、社会观察与学术思考。
+
+
 
           </p>
 
 
 
+
+
+
+
           <p>
+
+
 
             我关心人如何成为自己，
 
+
+
             历史如何留在普通人的生命里，
+
+
 
             以及教育是否能够帮助我们重新塑造自己。
 
+
+
           </p>
+
+
+
+
 
 
 
           <p>
 
+
+
             很多公开文字，
+
+
 
             都开始于我的私人日志。
 
+
+
           </p>
+
+
+
+
 
 
 
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -2223,7 +4414,15 @@
 
 
 
+
+
+
+
         <div class="home-about-tags">
+
+
+
+
 
 
 
@@ -2231,7 +4430,15 @@
 
 
 
+
+
+
+
           <p>ORAL HISTORY</p>
+
+
+
+
 
 
 
@@ -2239,7 +4446,15 @@
 
 
 
+
+
+
+
           <p>ACADEMIC WORK</p>
+
+
+
+
 
 
 
@@ -2249,11 +4464,25 @@
 
 
 
+
+
+
+
+
+
       </div>
 
 
 
+
+
+
+
     </section>
+
+
+
+
 
 
 
@@ -2265,11 +4494,27 @@
 
 
 
+
+
+
+
+
+
+
+
   <!-- ========================================
+
+
 
        FOOTER
 
-  ========================================= -->
+
+
+  \========================================= -->
+
+
+
+
 
 
 
@@ -2277,19 +4522,39 @@
 
 
 
+
+
+
+
     <p>
+
+
 
       © <span id="year"></span> Emma Zhong
 
+
+
     </p>
+
+
+
+
 
 
 
     <p class="footer-note">
 
+
+
       Written slowly. Kept carefully.
 
+
+
     </p>
+
+
+
+
 
 
 
@@ -2299,11 +4564,25 @@
 
 
 
+
+
+
+
+
+
   <script src="script.js?v=6"></script>
 
 
 
+
+
+
+
 </body>
+
+
+
+
 
 
 
