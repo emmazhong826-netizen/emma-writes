@@ -1174,6 +1174,7 @@ def build_search_index(
 def copy_shared_files_for_preview():
     for name in [
         "style.css",
+        "home-v1.css",
         "script.js",
         "index.html",
         "dayeye.html",
